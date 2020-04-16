@@ -1,0 +1,398 @@
+body {
+	background-color: #FFFAFA;
+	margin: auto;
+}
+
+.navbar {
+	background-color: Cornsilk;
+	color: #000000;
+}
+
+#navItem {
+	color: black;
+}
+
+.logo {
+	display: block; 
+	margin-left: auto; 
+	margin-right: auto;
+}
+
+.description {
+	font-style: bold;
+	margin-left: 170px;
+}
+
+.quantity {
+	margin-left: 420px;
+	margin-bottom: 30px;
+	height: 2px;
+}
+
+.shopContainer {
+	margin-left: 320px;
+}
+
+
+}
+a {
+	font-family: Adobe FangSong Std R;
+    color: #000000
+    text-decoration: none;
+}
+
+.line {
+	color: black;
+}
+
+.mainheading
+   {
+	text-align: center;
+	font-family: Adobe FangSong Std R;
+}
+
+header {
+	text-align: right;
+	margin-right: 20px;
+	margin-top: 5px;
+}
+
+ion-icon {
+	vertical-align: middle;
+}
+
+.cart {
+	color: CornSilk;
+}
+
+h2 {
+	font-family: Adobe FangSong Std R;
+	text-align: left;
+	margin-left: 10px;
+}
+
+img {
+	height: 234px;
+	margin-right: 100px;
+	margin-left: 180px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.images-container {
+	display: block;
+	margin: auto;
+}
+
+
+p {
+	font-family: Adobe FangSong Std R;
+}
+
+footer {
+	text-align: center;
+	margin-bottom: 20px;
+	margin-top: 10px;
+	font-size: 8pt;
+}
+
+.backtotop {
+	text-align: left;
+	margin-right: 10px;
+	text-decoration: underline;
+}
+
+#loyaltycard {
+	margin-left: 230px;
+	float: left;
+}
+
+.loyaltycardinfo {
+	font-family: Adobe FangSong Std R; 
+	text-align: left;
+	margin-left: 10px;
+	margin-right: 10px;
+	margin-top: 20px; 
+}
+
+.subscribeHead {
+	margin-left: 40px;
+}
+
+.form-group {
+	margin-right: 10px;
+	margin-left: 10px;
+	width: 50%;
+}
+
+.form-group2 {
+	background-color: LightGrey hsl(80, 25%, 25%);
+	float: left;
+	width: 500px;
+	height: 300px;
+	margin: 10px;
+	border: 3px solid #888888;
+	border-radius: 25px;
+	margin-bottom: 70px;
+	animation: mymove 5s infinite;
+}
+
+.smallpara {
+	text-align: center;
+}
+
+.catHead {
+	font-family: Adobe FangSong Std R;
+	margin-top: 30px;
+	margin-left: 10px; 
+	text-align: center;
+}
+
+.subHeads {
+	margin-left: 50px;
+	font-size: 15pt;
+}
+
+.cataloguePic {
+	height: 290px;
+	width: 300px;
+}
+
+.cataPic {
+	width: 300px;
+	padding: 25px 50px 75px 100px;
+}
+
+.seeMore {
+	text-align: right;
+	text-decoration: underline;
+	font-style: italic;
+	margin-bottom: 50px;
+}
+
+#about {
+	margin-left: 10px;
+	text-align: center;
+}
+
+.address {
+	text-align: center;
+	margin-top: 10px;
+}
+
+.addLink{
+	font-style: italic;
+}
+
+.info {
+	margin-left: 10px;
+	text-align: center;
+}
+
+.contacts {
+	text-decoration: underline;
+	text-decoration-color: hsla(0, 100%, 30%, 0.3);
+	font-style: italic;
+}
+
+.price {
+	margin-left: 215px;
+	font-weight: bold;
+}
+
+.range {
+	font-family: Adobe FangSong Std R;
+	list-style-type: square;
+	list-style-position: outside;
+	margin-left: 570px;
+}
+
+.reviews {
+	font-family: Adobe FangSong Std R;
+	margin-left: 10px;
+}
+#creditcard {
+	margin-left: 10px;
+}
+
+#creditcard:hover {
+	background-color: #ccc;
+
+}
+
+#payPal {
+	margin-left: 10px;
+}
+
+#payPal:hover {
+	background-color: #ccc;
+}
+
+.comment {
+	margin-right: 30px;
+	font-style: italic;
+	margin-left: 10px;
+}
+
+.customerReview {
+	float: left;
+	width: 500px;
+	height: 200px;
+	margin: 10px;
+	border: 3px solid #888888;
+	border-radius: 25px;
+	background-color: white;
+	animation: mymove 5s infinite;
+}
+
+@keyframes mymove {
+	50% {box-shadow: 10px 20px 30px grey;}
+}
+
+.seeMore2 {
+	margin-left: 10px;
+}
+
+.clothDescription {
+	font-style: bold;
+	margin-left: 200px;
+}
+
+.inStock {
+	color: green;
+	margin-left: 220px;
+}
+
+.price {
+	font-style: bold;
+}
+
+.outStock {
+	color: red;
+	margin-left: 210px;
+}
+
+.table {
+	border: solid, black;
+}
+
+.pic {
+	filter: blur(10%);
+	padding: 2px;
+    background-color: LightGrey;
+    transition: transform .2s; /* Animation */
+}
+
+.pic:hover {
+  transform: scale(1.5); 
+}
+
+.loyaltyInfo {
+	display: block;
+	margin: auto;
+}
+
+#yourCart {
+	text-align: center;
+
+}
+
+.col-3,
+.col-6 {
+	text-decoration: underline;
+}
+
+#quantityNum {
+	width: 20%;
+	margin-right: 200px;
+}
+
+#remove-btn {
+	margin-right: 150px;
+}
+
+
+h3 {
+	margin-left: 120px;
+}
+
+.add-cart {
+	margin-left: 120px;
+	color: black;
+	cursor: pointer;
+}
+
+#cart-icon {
+	vertical-align: middle;
+}
+
+#cart-icon-span {
+	vertical-align: middle;
+}
+
+
+.items-container {
+	max-width: 650px;
+	justify-content: space-around;
+	margin-top: 50px;
+	margin: 0 auto;
+}
+
+.item-header {
+	width: 100%;
+	max-width: 650px;
+	display: flex;
+	justify-content: flex-start;
+	border-bottom: 4px solid LightGrey;
+	margin: 0 auto;
+}
+
+.item-title {
+	width: 45%;
+}
+
+.item-price {
+	width: 15%;
+	display: flex;
+	align-items: center;
+}
+
+.item-quantity {
+	width: 30%;
+	display: flex;
+	align-items: center;
+}
+
+.item-total {
+	width: 10%;
+	display: flex;
+	align-items: center;
+}
+
+.items {
+	width: 45%;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	padding: 10px 0;
+}
+
+.collection-form {
+	float: right;
+	border: 1px solid;
+	width: 100%
+	margin-bottom: 50px;
+	margin-left: 600px;
+}
+
+.delivery-form {
+	width: 100%;
+	border: 2px solid;
+	margin-bottom: 50px;
+}
+
+.showMore {
+	cursor: pointer;
+	align-self: middle;
+}
+
