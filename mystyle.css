@@ -34,10 +34,9 @@ body {
 }
 
 
-}
 a {
 	font-family: Adobe FangSong Std R;
-    color: #000000
+    color: #000000;
     text-decoration: none;
 }
 
@@ -380,7 +379,7 @@ h3 {
 .collection-form {
 	float: right;
 	border: 1px solid;
-	width: 100%
+	width: 100%;
 	margin-bottom: 50px;
 	margin-left: 600px;
 }

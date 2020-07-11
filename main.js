@@ -39,10 +39,6 @@ $(document).ready(function() {
 	let h2 = $(".contact");//jQuery function that animates the heading on the ContactUs.html page
 	h2.animate({fontSize: '3em'}, "slow");
 
-	$(".showMore").click(function() {//jQuery function that toggles between showing info and hiing info on the AboutUs.html page
-		$(".womensClothing").toggle();
-	})
-
 
 	for (i in Item) {//for in loop to display catalogue items on the catalogue page
 		$(".container").append(
