@@ -21,37 +21,35 @@
 <body>
 	<!-- NAV START -->
 	<header>
-			<div class="menu">
-				<button onclick="openMenu()">&#9776;</button>
+			<div>
+				<ul class="nav">
+					<li class="nav-item">
+						<a onclick="menuDropdown()" class="dropbtn">Home</a>
+						<div id="myDropdown" class="dropdown-content">
+							<a href="#">Link</a>
+						</div>
+					</li>
+					<li class="nav-item">
+						<a href="/Shop.html">Shop</a>
+					</li>
+					<li class="nav-item">
+						<a href="/AboutUs.html">About</a>
+					</li>
+					<li class="nav-item">
+						<a href="/Blog.html">Blog</a>
+					</li>
+					<li class="nav-item">
+						<a href="/Gallery.html">Gallery</a>
+					</li>
+					<li class="nav-item">
+						<a href="/Contact.html">Contact</a>
+					</li>
+				</ul>
 			</div>
 			<div class="header-links">
-				<a href="Shop.html"><ion-icon name="cart-outline"></ion-icon><span>0</span></a>
-				<a href=""><ion-icon name="logo-facebook"></ion-icon></a>
-				<a href=""><ion-icon name="logo-instagram"></ion-icon></a>
-				<a href=""><ion-icon name="logo-twitter"></ion-icon></a>		
+				<a href="Shop.html"><ion-icon name="cart-outline"></ion-icon><span>0</span></a>	
 			</div>
 	</header>
-
-	<aside class="sidebar">
-		<div class="menu-background">
-			<h1 class="lead menu-title">Contemporary Clothing Collective</h1>
-		</div>
-		<button class="sidebar-close-button" onclick="closeMenu()"><ion-icon name="close-outline"></ion-icon></button>
-		<ul class="menu-list">
-			<li>
-				<a href="/Home.html" class="menu-item">Home</a>
-			</li>
-			<li>
-				<a href="/AboutUs.html" class="menu-item">About</a>
-			</li>
-			<li>
-				<a href="/Catalogue.html" class="menu-item">Catalogue</a>
-			</li>
-			<li>
-				<a href="/Shop.html" class="menu-item">Shop</a>
-			</li>
-		</ul>
-	</aside>
 
 	<!-- WELCOME SECTION -->
 	<section class="welcome-section">
