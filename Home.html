@@ -5,32 +5,65 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<title>Industria Clothing Collective</title>
-	<!--Link to bootstrap files -->
+	<!-- BOOTSTRAP -->
 	<link 
 		rel="stylesheet" 
 		href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" 
 		integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" 
 		crossorigin="anonymous"
 	>
-	<!--Link to external stylesheet -->
+	<!-- CSS -->
 	<link rel="stylesheet" href="mystyle.css">
-	<!--Link for "back to top" to allow user to click their way back to the top of the page-->
-	<a name="back to top"></a> 
+	<!-- GOOGLE FONTS -->
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Peddana&display=swap" rel="stylesheet">
 </head>
 <body>
+	<!-- NAV START -->
 	<header>
-		<!-- Icons -->
-		<ul>
-			<li class="cart">
-				<a style="color: #000000;" href="Shop.html">
-					<ion-icon name="cart-outline"></ion-icon>Cart<span>0</span><br><br>
-					<ion-icon name="logo-facebook"></ion-icon><br>
-					<ion-icon name="logo-instagram"></ion-icon><br>
-					<ion-icon name="logo-twitter"></ion-icon>
-				</a>
-			</li>	
-		</ul>
+			<div class="menu">
+				<button onclick="openMenu()">&#9776;</button>
+			</div>
+			<div class="header-links">
+				<a href="Shop.html"><ion-icon name="cart-outline"></ion-icon><span>0</span></a>
+				<a href=""><ion-icon name="logo-facebook"></ion-icon></a>
+				<a href=""><ion-icon name="logo-instagram"></ion-icon></a>
+				<a href=""><ion-icon name="logo-twitter"></ion-icon></a>		
+			</div>
 	</header>
+
+	<aside class="sidebar">
+		<div class="menu-background">
+			<h1 class="lead menu-title">Contemporary Clothing Collective</h1>
+		</div>
+		<button class="sidebar-close-button" onclick="closeMenu()"><ion-icon name="close-outline"></ion-icon></button>
+		<ul class="menu-list">
+			<li>
+				<a href="/Home.html" class="menu-item">Home</a>
+			</li>
+			<li>
+				<a href="/AboutUs.html" class="menu-item">About</a>
+			</li>
+			<li>
+				<a href="/Catalogue.html" class="menu-item">Catalogue</a>
+			</li>
+			<li>
+				<a href="/Shop.html" class="menu-item">Shop</a>
+			</li>
+		</ul>
+	</aside>
+
+	<!-- WELCOME SECTION -->
+	<section class="welcome-section">
+		<div class="logo">
+			<img class="logo-image" src="/images/industria.jpg" alt="logo" />
+		</div>
+	</section>
+
+	<!-- NEW ARRIVALS SECTION -->
+	<section class="new-arrivals">
+
+	</section>
 	<img class="logo" src="images/IndustriaCollective.jpg" alt="industria logo">
 	<nav class="navbar navbar-light bg-light">
 		<a id="navItem" href="Home.html"> Home  |</a>

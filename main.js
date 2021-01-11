@@ -34,6 +34,15 @@
 		}
 	];
 
+	// function to open sideMenu
+	function openMenu() {
+		document.querySelector(".sidebar").classList.add("open");
+	}
+
+	function closeMenu() {
+		document.querySelector(".sidebar").classList.remove("open");
+	}
+
 $(document).ready(function() {
 
 	let h2 = $(".contact");//jQuery function that animates the heading on the ContactUs.html page
