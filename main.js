@@ -35,8 +35,16 @@
 	];
 
 	// function for dropdown menu 
-	function menuDropdown() {
+	function homeDropdown() {
 		document.getElementById("myDropdown").classList.toggle("show");
+	}
+
+	function shopDropdown() {
+		document.getElementById("myDropdown2").classList.toggle("show");
+	}
+
+	function aboutDropdown() {
+		document.getElementById("myDropdown3").classList.toggle("show");
 	}
 
 	// close the dropdown when a user clicks outside of it 

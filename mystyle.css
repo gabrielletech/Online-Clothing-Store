@@ -2,11 +2,17 @@ body {
 	background-color: #FFFAFA;
 	margin: 0;
 	height: 100vh;
-	font-family: 'Peddana', serif;
+	font-family: 'Abel', sans-serif;
+}
+
+* {
+	font-family: 'Abel', sans-serif;
 }
 
 html {
 	box-sizing: border-box;
+	font-family: 'Abel', sans-serif;
+	scroll-behavior: smooth;
 }
 
 /* WELCOME SECTION */
@@ -31,10 +37,12 @@ html {
 	display: inline;
 	margin-right: 3rem;
 	margin-left: 2rem;
+	cursor: pointer;
 }
 
 .nav li:hover {
-	border-bottom: 3px solid #ffc0cb;
+	border-bottom: 3px solid #ffeded;
+	cursor: pointer;
 }
 
 .nav-item a:hover {
@@ -45,8 +53,8 @@ html {
 .dropdown-content {
 	display: none;
 	position: absolute;
-	background-color: #faebd7;
-	min-width: 160px;
+	background-color: #FFFAFA;
+	min-width: 250px;
 	z-index: 1;
 	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 }
@@ -58,7 +66,15 @@ html {
 	display: block;
 }
 
+.dropdown-content a:hover {
+	background-color: #ffeded;
+}
+
 .show {display:block};
+
+.dropbtn {
+	cursor: pointer;
+}
 
 .header-links a {
 	color: #000000;
@@ -106,12 +122,89 @@ header {
 }
 
 /* NEW ARRIVALS */
+.new-arrivals {
+	width: 100%;
+	height: 100vh;
+}
 
+.pic {
+	height: 400px;
+	margin-right: 100px;
+	margin-left: 180px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
 
-.logo {
-	display: block; 
-	margin-left: auto; 
-	margin-right: auto;
+.new-arrivals-title {
+	text-align: center;
+	font-weight: lighter;
+}
+
+hr.line {
+	border: 3px solid #ffeded;
+	width: 50px;
+}
+
+.new-arrivals-title:hover a {
+	text-decoration: none;
+	color: #000;
+}
+
+.na-bottom {
+	width: 40px;
+	font-weight: bold;
+	color: #ffeded;
+}
+
+.na-container {
+	position: relative;
+	width: 100%;
+	max-width: 300px;
+}
+
+.overlay-1,
+.overlay-2,
+.overlay-3,
+.overlay-4,
+.overlay-5,
+.overlay-6 {
+	position: absolute;
+	bottom: 0;
+	background: rgb(253, 215, 215);
+	color: #000;
+	width: 100%;
+	opacity: 0;
+	margin-left: 230px;
+	padding: 20px;
+	text-align: center;
+	background-color: #ffeded;
+	transform: .5s ease;
+	-webkit-transform: .5s ease;
+	-moz-transform: .5s ease;
+	-ms-transform: .5s ease;
+	-o-transform: .5s ease;
+}
+
+.na-container:hover .overlay-1,
+.na-container:hover .overlay-2,
+.na-container:hover .overlay-3,
+.na-container:hover .overlay-4,
+.na-container:hover .overlay-5,
+.na-container:hover .overlay-6 {
+	opacity: 1;
+}
+
+/* WHATS NEW SECTION  */
+.whats-new {
+	width: 100%;
+	height: 100vh;
+	background-color: #ffeded;
+}
+
+.whats-new-title {
+	text-align: center;
+	font-weight: lighter;
+	margin: 20px;
 }
 
 .description {
@@ -164,19 +257,6 @@ h2 {
 	font-family: Adobe FangSong Std R;
 	text-align: left;
 	margin-left: 10px;
-}
-
-img {
-	height: 234px;
-	margin-right: 100px;
-	margin-left: 180px;
-	margin-top: 20px;
-	margin-bottom: 20px;
-}
-
-.images-container {
-	display: block;
-	margin: auto;
 }
 
 
@@ -369,17 +449,6 @@ footer {
 
 .table {
 	border: solid, black;
-}
-
-.pic {
-	filter: blur(10%);
-	padding: 2px;
-    background-color: LightGrey;
-    transition: transform .2s; /* Animation */
-}
-
-.pic:hover {
-  transform: scale(1.5); 
 }
 
 .loyaltyInfo {
