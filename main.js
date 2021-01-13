@@ -70,7 +70,7 @@ $(document).ready(function() {
 
 
 	for (i in Item) {//for in loop to display catalogue items on the catalogue page
-		$(".container").append(
+		$(".shop-container").append(
 			`<div class="image">
 		    	<img src="${Item[i].image}" alt="${Item[i].name}" class="cataPic responsive rounded">
 		    	<h3 class="shopItem">${Item[i].name}</h3>

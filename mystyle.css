@@ -15,6 +15,25 @@ html {
 	scroll-behavior: smooth;
 }
 
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) { ... }
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) { ... }
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) { ... }
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199.98px) { ... }
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) { 
+	.pic {
+		height: 40px;
+	}
+ }
+
 /* WELCOME SECTION */
 .welcome-section {
 	width: 100%;
@@ -128,16 +147,13 @@ header {
 }
 
 .pic {
-	height: 400px;
-	margin-right: 100px;
-	margin-left: 180px;
-	margin-top: 20px;
-	margin-bottom: 20px;
+	height: 250px;
 }
 
 .new-arrivals-title {
 	text-align: center;
 	font-weight: lighter;
+	margin: 25px;
 }
 
 hr.line {
@@ -156,55 +172,49 @@ hr.line {
 	color: #ffeded;
 }
 
-.na-container {
-	position: relative;
-	width: 100%;
-	max-width: 300px;
+.shop-now {
+	display: block;
+	margin: auto;
+	font-size: 20px;
+	outline: none;
+	background-color: #FFFAFA;
+	border: 1px solid #d3d1d1;
+	padding: 15px;
+	width: 250px;
+	border-radius: 1%;
+	-webkit-border-radius: 1%;
+	-moz-border-radius: 1%;
+	-ms-border-radius: 1%;
+	-o-border-radius: 1%;
 }
 
-.overlay-1,
-.overlay-2,
-.overlay-3,
-.overlay-4,
-.overlay-5,
-.overlay-6 {
-	position: absolute;
-	bottom: 0;
-	background: rgb(253, 215, 215);
-	color: #000;
-	width: 100%;
-	opacity: 0;
-	margin-left: 230px;
-	padding: 20px;
-	text-align: center;
+.shop-now:hover {
 	background-color: #ffeded;
-	transform: .5s ease;
-	-webkit-transform: .5s ease;
-	-moz-transform: .5s ease;
-	-ms-transform: .5s ease;
-	-o-transform: .5s ease;
-}
-
-.na-container:hover .overlay-1,
-.na-container:hover .overlay-2,
-.na-container:hover .overlay-3,
-.na-container:hover .overlay-4,
-.na-container:hover .overlay-5,
-.na-container:hover .overlay-6 {
-	opacity: 1;
+	border: none;
 }
 
 /* WHATS NEW SECTION  */
 .whats-new {
 	width: 100%;
 	height: 100vh;
-	background-color: #ffeded;
+	background-color: #f3e9e9;
+	text-decoration: none;
 }
 
 .whats-new-title {
 	text-align: center;
-	font-weight: lighter;
-	margin: 20px;
+	margin: 30px;
+	padding: 30px;
+}
+
+#whats-happening {
+	text-decoration: none;
+}
+
+.blog-pic {
+	margin: auto;
+	display: block;
+	height: 500px;
 }
 
 .description {
@@ -224,7 +234,6 @@ hr.line {
 
 
 a {
-	font-family: Adobe FangSong Std R;
     color: #000000;
     text-decoration: none;
 }
@@ -239,29 +248,12 @@ a {
 	font-family: Adobe FangSong Std R;
 }
 
-/*header {
-	text-align: right;
-	margin-right: 20px;
-	margin-top: 5px;
-}*/
-
 ion-icon {
 	vertical-align: middle;
 }
 
 .cart {
 	font-weight: bold;
-}
-
-h2 {
-	font-family: Adobe FangSong Std R;
-	text-align: left;
-	margin-left: 10px;
-}
-
-
-p {
-	font-family: Adobe FangSong Std R;
 }
 
 footer {
