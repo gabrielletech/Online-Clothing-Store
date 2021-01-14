@@ -16,7 +16,11 @@ html {
 }
 
 /* Extra small devices (portrait phones, less than 576px) */
-@media (max-width: 575.98px) { ... }
+@media (max-width: 575.98px) { 
+	.pic {
+		height: 40px;
+	}
+ }
 
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) and (max-width: 767.98px) { ... }
@@ -29,9 +33,7 @@ html {
 
 /* Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) { 
-	.pic {
-		height: 40px;
-	}
+	
  }
 
 /* WELCOME SECTION */
@@ -143,7 +145,7 @@ header {
 /* NEW ARRIVALS */
 .new-arrivals {
 	width: 100%;
-	height: 100vh;
+	height: 80vh;
 }
 
 .pic {
@@ -154,6 +156,7 @@ header {
 	text-align: center;
 	font-weight: lighter;
 	margin: 25px;
+	font-size: 50px;
 }
 
 hr.line {
@@ -205,6 +208,7 @@ hr.line {
 	text-align: center;
 	margin: 30px;
 	padding: 30px;
+	font-size: 50px;
 }
 
 #whats-happening {
@@ -214,9 +218,62 @@ hr.line {
 .blog-pic {
 	margin: auto;
 	display: block;
-	height: 500px;
+	height: 350px;
 }
 
+.blog-text {
+	border-left: 3px solid #888888;
+}
+
+.continue-reading {
+	text-align: right;
+	text-decoration: underline;
+}
+
+/* FORM AREA */
+.subscribe {
+	text-align: justify;
+}
+
+.form-figure {
+	background: rgb(27, 23, 23);
+	position: absolute;
+	left: 35%;
+	top: 30%;
+	width: 42%;
+	color: #fff;
+	padding: 20px;
+	text-align: center;
+}
+
+.bg-image {
+	height: 100%;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+}
+
+.img1 {
+	background-image: url("images/cloth18.jpg");
+}
+
+.subscribe-btn {
+	padding: 7px;
+	background-color: #fff;
+	border: none;
+} 
+
+.subscribe-btn:hover {
+	background-color: #ffeded;
+}
+
+/* FOOTER SECTION */
+.footer-section{
+	height: 50vh;
+	width: 100%;
+	
+}
 .description {
 	font-style: bold;
 	margin-left: 170px;
@@ -261,29 +318,6 @@ footer {
 	margin-bottom: 20px;
 	margin-top: 10px;
 	font-size: 8pt;
-}
-
-.backtotop {
-	text-align: left;
-	margin-right: 10px;
-	text-decoration: underline;
-}
-
-#loyaltycard {
-	margin-left: 230px;
-	float: left;
-}
-
-.loyaltycardinfo {
-	font-family: Adobe FangSong Std R; 
-	text-align: left;
-	margin-left: 10px;
-	margin-right: 10px;
-	margin-top: 20px; 
-}
-
-.subscribeHead {
-	margin-left: 40px;
 }
 
 .form-group {
