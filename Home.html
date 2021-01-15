@@ -19,7 +19,7 @@
 </head>
 <body>
 	<!-- NAV START -->
-	<header>
+	<header class="header">
 			<div>
 				<ul class="nav">
 					<li class="nav-item">
@@ -27,14 +27,16 @@
 						<div id="myDropdown" class="dropdown-content">
 							<a href="#new-arrivals">New Arrivals</a>
 							<a href="#whats-new">Whats New?</a>
-							<a href="#">Products</a>
-							<a href="#">Links</a>
-							<a href="#">Tips & FAQs</a>
+							<a href="#products">Products</a>
+							<a href="#links">Links</a>
+							<a href="#tips&faqs">Tips & FAQs</a>
+							<a href="#connect">Connect With Us</a>
 						</div>
 					</li>
 					<li class="nav-item">
 						<a href="#" onclick="shopDropdown()" class="dropbtn">Shop</a>
 						<div id="myDropdown2" class="dropdown-content">
+							<a href="/Shop.html">Shop All  <ion-icon name="chevron-forward-outline"></ion-icon></a>
 							<a href="#">Dresses</a>
 							<a href="#">Tops</a>
 							<a href="#">Pants & Bottoms</a>
@@ -81,25 +83,25 @@
 
 	<!-- NEW ARRIVALS SECTION -->
 	<section id="new-arrivals" class="new-arrivals">
-			<h2 class="new-arrivals-title"><a href="/">New Arrivals</a></h2>
+			<h2 class="new-arrivals-title"><a href="/Shop.html">New Arrivals</a></h2>
 			<hr class="line" />
 			<div class="container">
 			<div class="row ">
 					<div class="col-sm">
 							<img src="images/115889193_1215859095440630_3124536734724679976_n.jpg" alt="clothing item 1" class="pic">
-							<div class="overlay-1">Dresses</div>
+							<div class="na-links"><a href="/Shop.html">Dresses</a></div>
 					</div>
 					<div class="col-sm">
 							<img src="images/126487819_1316119962081209_8626173075785479562_n.jpg" alt="clothing item 2" class="pic">
-							<div class="overlay-2">Denim</div>
+							<div class="na-links"><a href="/Shop.html">Denim</a></div>
 					</div> 
 					<div class="col-sm">
 							<img src="images/69833692_937699106589965_1949832117781266432_n.jpg" alt="clothing item 3" class="pic">
-							<div class="overlay-3">Tops</div>
+							<div class="na-links"><a href="/Shop.html">Tops</a></div>
 					</div>
 					<div class="col-sm">
 							<img src="images/78498933_1016351058724769_390191615563530240_n.jpg" alt="clothing item 4" class="pic">
-							<div class="overlay-4">Shoes</div>
+							<div class="na-links"><a href="/Shop.html">Shoes</a></div>
 					</div> 
 				</div>
 				<div class="row">	
@@ -165,22 +167,41 @@
 			<div class="container-fluid">
 				<div class="row align-items-center">
 					<div class="col col-md-5">
-						<img src="/images/logo.jpg" alt="footer-logo" />
+						<img class="footer-logo" src="/images/IndustriaCollective.jpg" alt="footer-logo" />
+						<ul class="footer-items">
+							<li><ion-icon name="location-outline"></ion-icon>1 Hurworth Road, Highlands, Harare, Zimbabwe</li>
+							<li><ion-icon name="call-outline"></ion-icon>+263 77 908 7232</li>
+							<li><ion-icon name="mail-outline"></ion-icon>helloclotheszw@gmail.com</li>
+						</ul>
 					</div>
 
 					<div class="col col-md-2">
-						<h5>Links</h5>
-						<ul>
-							<li>Products</li>
+						<h5 class="footer-header" id="links">Links</h5>
+						<ul class="footer-items">
+							<li><a href="/Shop.html" id="products">Products</a></li>
+							<li><a href="/Blog.html">Blog</a></li>
+							<li><a href="/AboutUs.html" id="careers">Careers</a></li>
+							<li><a href="/AboutUs.html" id="privacyPolicy">Privacy Policy</a></li>
+							<li id="tips&faqs">Tips & FAQs</li>
 						</ul>
 					</div>
 
 					<div class="col col-md-2">
 						<h5>Shop</h5>
+						<ul class="footer-items">
+							<li>Catalog</li>
+							<li>Trending</li>
+							<li>Gallery</li>
+							<li>Rewards</li>
+							<li>Returns Policy</li>
+						</ul>	
 					</div>
 
 					<div class="col col-md-2">
-						<h5>Connect With Us: </h5>
+						<h5 id="connect">Connect With Us: </h5>
+						<ion-icon name="logo-facebook"></ion-icon>
+						<ion-icon name="logo-instagram"></ion-icon>
+						<ion-icon name="logo-whatsapp"></ion-icon>
 					</div>
 				</div>
 			</div>

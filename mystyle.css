@@ -16,14 +16,33 @@ html {
 }
 
 /* Extra small devices (portrait phones, less than 576px) */
-@media (max-width: 575.98px) { 
+@media screen and (max-width: 575.98px) { 
 	.pic {
 		height: 40px;
+	}
+
+	.sidebar a{
+		text-align: center;
+		float: none;
 	}
  }
 
 /* Small devices (landscape phones, 576px and up) */
-@media (min-width: 576px) and (max-width: 767.98px) { ... }
+@media screen and (max-width: 767.98px) { 
+	.sidebar {
+		width: 100%;
+		height: auto;
+		position: relative;
+	}
+
+	.sidebar a {
+		float: left
+	}
+
+	div.content {
+		margin-left: 0;
+	}
+ }
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) and (max-width: 991.98px) { ... }
@@ -272,8 +291,121 @@ hr.line {
 .footer-section{
 	height: 50vh;
 	width: 100%;
+	margin: 40px;
+	padding: 20px;
+	display: flexbox;
+}
+
+.footer-items li {
+	list-style-type: none;
+	font-size: 16px;
+	justify-content: space-between;
 	
 }
+
+.footer-header {
+	text-align: center;
+}
+
+.footer-logo {
+	height: 120px;
+	width: 120px;
+}
+
+/*********************************************************************************************************************/
+/* SHOP PAGE*/
+
+/* HEADER SECTION */
+
+/* flip-box container */
+.flip-box {
+	background-color: transparent;
+	width: 100%;
+	height: 330px;
+	perspective: 1000px;
+}
+/* Position the front and back side */
+.flip-box-inner {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	transform-style: preserve-3d;
+	transition: transform 0.8s;
+	-webkit-transition: transform 0.8s;
+	-moz-transition: transform 0.8s;
+	-ms-transition: transform 0.8s;
+	-o-transition: transform 0.8s;
+}
+
+/* Does a horizontal flip when you move the mouse over the flip box container */
+.flip-box:hover .flip-box-inner {
+	transform: rotateY(180deg);
+	-webkit-transform: rotateY(180deg);
+	-moz-transform: rotateY(180deg);
+	-ms-transform: rotateY(180deg);
+	-o-transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-box-front,
+.flip-box-back {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	backface-visibility: hidden;
+	-webkit-backface-visibility: hidden;
+}
+
+.flip-box-front {
+	background-image: url("/images/14990930_344901982536350_6392879444844406940_o.jpg");
+}
+
+.flip-box-back {
+	background-image: url("/images/photo-1556159992-e189f8e50104.jpg");
+	transform: rotateY(180deg);
+	-webkit-transform: rotateY(180deg);
+	-moz-transform: rotateY(180deg);
+	-ms-transform: rotateY(180deg);
+	-o-transform: rotateY(180deg);
+}
+
+/* SIDE MENU */
+.sidebar {
+	margin: 0;
+	padding: 0;
+	width: 250px;
+	background-color:  #FFFAFA;
+	position: fixed;
+	height: 100%;
+	overflow: auto;
+}
+
+.sidebar a {
+	display: block;
+	color: #000;
+	padding: 16px;
+	text-decoration: none;
+}
+
+.sidebar a.active {
+	background-color: #ffeded;
+}
+
+/* Links on mouseover */
+.sidebar a:hover:not(.active) {
+	background-color: #ffeded;
+}
+
+div.content {
+	margin-left: 250px;
+	padding: 1px 16px;
+	height: 1000px;
+}
+
+.shop-title {
+	text-align: center;
+}
+
 .description {
 	font-style: bold;
 	margin-left: 170px;
