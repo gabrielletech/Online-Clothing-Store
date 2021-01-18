@@ -1,6 +1,9 @@
+@charset "utf-8";
+
 body {
 	background-color: #FFFAFA;
 	margin: 0;
+	padding: 0;
 	height: 100vh;
 	font-family: 'Abel', sans-serif;
 }
@@ -369,6 +372,11 @@ hr.line {
 	-o-transform: rotateY(180deg);
 }
 
+.just-in {
+	width: auto;
+	height: 100vh;
+}
+
 /* SIDE MENU */
 .sidebar {
 	margin: 0;
@@ -378,6 +386,10 @@ hr.line {
 	position: fixed;
 	height: 100%;
 	overflow: auto;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	overflow-x: hidden;
 }
 
 .sidebar a {
@@ -404,6 +416,167 @@ div.content {
 
 .shop-title {
 	text-align: center;
+	padding: 20px;
+}
+
+/* PRODUCT CARD */
+.card {
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+	max-width: 280px;
+	margin: auto;
+	text-align: center;
+	height: 250px;
+}
+
+.price {
+	color: #808080;
+}
+
+.card button {
+	border: none;
+	outline: 0;
+	padding: 12px;
+	color: #fff;
+	background-color: #000000;
+	text-align: center;
+	cursor: pointer;
+	width: 100%;
+	font-size: 18px;
+}
+
+.shop-gallery {
+	display: grid;
+	grid-template-columns: repeat(8, 1fr);
+	grid-template-rows: repeat(8, 5vw);
+	gap: 15px;
+	position: relative;
+}
+
+.shop-gallery-img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	opacity: 1;
+	display: block;
+	backface-visibility: hidden;
+	-webkit-backface-visibility: hidden;
+}
+
+.shop-gallery-item-1 {
+	grid-column-start: 1;
+	grid-column-end: 4;
+	grid-row-start: 1;
+	grid-row-end: 8;
+	box-shadow: 2px 2px 12px rgba(0,0,0,0.2);
+}
+
+.shop-gallery-item-2 {
+	grid-column-start: 4;
+	grid-column-end: 9;
+	grid-row-start: 1;
+	grid-row-end: 4;
+	box-shadow: 2px 2px 12px rgba(0,0,0,0.2);
+}
+
+.shop-gallery-item-3 {
+	grid-column-start: 4;
+	grid-column-end: 9;
+	grid-row-start: 4;
+	grid-row-end: 8;
+	box-shadow: 2px 2px 12px rgba(0,0,0,0.2);
+}
+
+.tops-text {
+	text-align: center;
+	position: absolute;
+	top: 2%;
+	left: 1%;
+	color: #fff;
+	font-weight: bold;
+	font-style: italic;
+	font-size: 20px;
+}
+
+.acc-text {
+	text-align: center;
+	position: absolute;
+	top: 2%;
+	left: 90%;
+	color: #fff;
+	font-size: 20px;
+	font-weight: bold;
+	font-style: italic;
+}
+
+.dresses-text {
+	text-align: center;
+	position: absolute;
+	top: 78%;
+	left: 90%;
+	color: #fff;
+	font-size: 20px;
+	font-weight: bold;
+	font-style: italic;
+}
+
+
+.box {
+	width: 300px;
+	box-shadow: 2px 2px 30px rgba(0,0,0,0.2);
+	overflow: hidden;
+	position: absolute;
+	border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	-ms-border-radius: 10px;
+	-o-border-radius: 10px;
+}
+
+.slide-img {
+	height: 250px;
+}
+
+.slide-img img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	box-sizing: border-box;
+}
+
+.detail-box {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	padding: 10px 20px;
+	box-sizing: border-box;
+}
+
+.type {
+	display: flex;
+	flex-direction: column;
+}
+
+.type a {
+	margin: 5px 0px;
+	font-weight: 700;
+	letter-spacing: 0.5px;
+	padding-right: 8px;
+}
+
+.type a:hover {
+	text-decoration: none;
+}
+
+/* DRESSES */
+.dresses {
+	width: auto;
+	height: 100vh;
+}
+
+/* TOPS */
+.tops {
+	width: auto;
+	height: 100vh;
 }
 
 .description {
