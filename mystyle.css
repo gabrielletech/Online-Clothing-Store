@@ -58,13 +58,71 @@ html {
 	
  }
 
-/* WELCOME SECTION */
-.welcome-section {
+ /* SECTIONS */
+ .welcome-section {
 	width: 100%;
 	height: 100vh;
 	background: url('/images/81800691_1055165681509973_6924672404362887168_o.jpg') no-repeat center;
 }
 
+.new-arrivals {
+	width: 100%;
+	height: 80vh;
+}
+
+.whats-new {
+	width: 100%;
+	height: 100vh;
+	background-color: #f3e9e9;
+	text-decoration: none;
+}
+
+.just-in {
+	width: auto;
+	height: 80vh;
+}
+
+.dresses {
+	width: auto;
+	height: 100vh;
+}
+
+.tops {
+	width: auto;
+	height: 100vh;
+}
+
+.bottoms {
+	width: auto;
+	height: 100vh;
+}
+
+.shoes {
+	width: auto;
+	height: 100vh;
+}
+
+.accessories {
+	width: auto;
+	height: 100vh;
+}
+
+.loungewear {
+	width: auto;
+	height: 100vh;
+}
+
+.swimwear {
+	width: auto;
+	height: 100vh;
+}
+
+.activewear {
+	width: auto;
+	height: 100vh;
+}
+
+/* WELCOME SECTION */
 .nav {
 	display: flex;
 	justify-content: flex-end;
@@ -165,11 +223,6 @@ header {
 }
 
 /* NEW ARRIVALS */
-.new-arrivals {
-	width: 100%;
-	height: 80vh;
-}
-
 .pic {
 	height: 250px;
 }
@@ -219,13 +272,6 @@ hr.line {
 }
 
 /* WHATS NEW SECTION  */
-.whats-new {
-	width: 100%;
-	height: 100vh;
-	background-color: #f3e9e9;
-	text-decoration: none;
-}
-
 .whats-new-title {
 	text-align: center;
 	margin: 30px;
@@ -372,9 +418,16 @@ hr.line {
 	-o-transform: rotateY(180deg);
 }
 
-.just-in {
-	width: auto;
-	height: 100vh;
+.header-logo {
+	display: block;
+	margin: auto;
+	height: 100px;
+	width: 100px;
+	border-radius: 50%;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	-ms-border-radius: 50%;
+	-o-border-radius: 50%;
 }
 
 /* SIDE MENU */
@@ -416,7 +469,7 @@ div.content {
 
 .shop-title {
 	text-align: center;
-	padding: 20px;
+	padding: 15px;
 }
 
 /* PRODUCT CARD */
@@ -511,8 +564,8 @@ div.content {
 .dresses-text {
 	text-align: center;
 	position: absolute;
-	top: 78%;
-	left: 90%;
+	top: 75%;
+	left: 89%;
 	color: #fff;
 	font-size: 20px;
 	font-weight: bold;
@@ -534,6 +587,8 @@ div.content {
 
 .slide-img {
 	height: 250px;
+	background-position: center;
+	background-size: cover;
 }
 
 .slide-img img {
@@ -567,17 +622,22 @@ div.content {
 	text-decoration: none;
 }
 
-/* DRESSES */
-.dresses {
-	width: auto;
-	height: 100vh;
+.product-items {
+	display: flex;
 }
 
-/* TOPS */
-.tops {
-	width: auto;
-	height: 100vh;
+.product-items li {
+	display: inline;
+	list-style-type: none;
+	margin-right: 12rem;
+	margin-left: 8rem;
 }
+
+/* DRESSES */
+
+
+/* TOPS */
+
 
 .description {
 	font-style: bold;
