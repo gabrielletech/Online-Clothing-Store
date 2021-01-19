@@ -45,6 +45,11 @@ html {
 	div.content {
 		margin-left: 0;
 	}
+
+	.team-col {
+		width: 100%;
+		display: block;
+	}
  }
 
 /* Medium devices (tablets, 768px and up) */
@@ -119,6 +124,21 @@ html {
 
 .activewear {
 	width: auto;
+	height: 100vh;
+}
+
+.who {
+	width: 100%;
+	height: 100vh;
+}
+
+.meet {
+	width: 100%;
+	height: 100vh;
+}
+
+.careers {
+	width: 100%;
 	height: 100vh;
 }
 
@@ -473,28 +493,8 @@ div.content {
 }
 
 /* PRODUCT CARD */
-.card {
-	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-	max-width: 280px;
-	margin: auto;
-	text-align: center;
-	height: 250px;
-}
-
 .price {
 	color: #808080;
-}
-
-.card button {
-	border: none;
-	outline: 0;
-	padding: 12px;
-	color: #fff;
-	background-color: #000000;
-	text-align: center;
-	cursor: pointer;
-	width: 100%;
-	font-size: 18px;
 }
 
 .shop-gallery {
@@ -633,11 +633,118 @@ div.content {
 	margin-left: 8rem;
 }
 
-/* DRESSES */
+/*********************************************************************************************************************/
+/* ABOUT US PAGE */
+.who-logo {
+	margin: 10px;
+	border-radius: 80%;
+	-webkit-border-radius: 80%;
+	-moz-border-radius: 80%;
+	-ms-border-radius: 80%;
+	-o-border-radius: 80%;
+}
 
+.split {
+	height: 80%;
+	width: 50%;
+	position: absolute;
+	z-index: 1;
+	padding-top: 20px;
+}
 
-/* TOPS */
+/* left side */
+.left {
+	left: 0;
+	background-color: #ffeded;
+}
 
+/* right side */
+.right {
+	right: 0;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.centered {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	text-align: center;
+	transform: translate(-50%, -50%);
+	-webkit-transform: translate(-50%, -50%);
+	-moz-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	-o-transform: translate(-50%, -50%);
+}
+
+.centered-bg {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	text-align: center;
+	transform: translate(-50%, -50%);
+	-webkit-transform: translate(-50%, -50%);
+	-moz-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	-o-transform: translate(-50%, -50%);
+}
+
+.img-bg {
+	background-image: url("images/photo-1547637916-48ceb6f8d505.jpg");
+}
+
+.centered-text {
+	color: #fff;
+	font-size: 24px;	
+}
+
+/* MEET THE TEAM */
+.meet-title {
+	text-align: center;
+}
+
+.team-col {
+	float: left;
+	width: 33.3%;
+	margin-bottom: 16px;
+	padding: 0 8px;
+}
+
+.card {
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+	margin: 8px;
+}
+
+.team-meet {
+	padding: 0 16px;
+}
+
+.team-meet::after, .team-row::after {
+	content: "";
+	clear: both;
+	display: table;
+}
+
+.title {
+	color: #808080;
+}
+
+.button {
+	border: none;
+	outline: 0;
+	display: inline-block;
+	padding: 8px;
+	color: #fff;
+	background-color: #000;
+	text-align: center;
+	cursor: pointer;
+	width: 100%;
+}
+
+.careers-title {
+	text-align: center;
+}
 
 .description {
 	font-style: bold;
