@@ -134,12 +134,12 @@ html {
 
 .meet {
 	width: 100%;
-	height: 100vh;
+	height: 150vh;
 }
 
 .careers {
 	width: 100%;
-	height: 100vh;
+	height: 50vh;
 }
 
 /* WELCOME SECTION */
@@ -645,22 +645,24 @@ div.content {
 }
 
 .split {
-	height: 80%;
-	width: 50%;
+	
 	position: absolute;
 	z-index: 1;
-	padding-top: 20px;
+	height: 80%;
 }
 
 /* left side */
 .left {
 	left: 0;
 	background-color: #ffeded;
+	width: 50%;
 }
 
 /* right side */
 .right {
 	right: 0;
+	width: 50%;
+	background-image: url("images/photo-1547637916-48ceb6f8d505.jpg");
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -669,7 +671,7 @@ div.content {
 .centered {
 	position: absolute;
 	top: 50%;
-	left: 50%;
+	left: 20%;
 	text-align: center;
 	transform: translate(-50%, -50%);
 	-webkit-transform: translate(-50%, -50%);
@@ -695,8 +697,10 @@ div.content {
 }
 
 .centered-text {
-	color: #fff;
-	font-size: 24px;	
+	color: #000;
+	font-size: 22px;
+	background-color: #f3e9e9;	
+	padding: 12px;
 }
 
 /* MEET THE TEAM */
@@ -707,7 +711,6 @@ div.content {
 .team-col {
 	float: left;
 	width: 33.3%;
-	margin-bottom: 16px;
 	padding: 0 8px;
 }
 
@@ -742,9 +745,26 @@ div.content {
 	width: 100%;
 }
 
+.meet-img {
+	width: 100%;
+	height: 600px;
+}
+
+/* CAREERS */
 .careers-title {
 	text-align: center;
 }
+
+div.vac-info {
+	margin-bottom: 20px;
+	padding: 4px 12px;
+}
+
+.vac-info {
+	background-color: #ccc;
+	border-left: 6px solid #808080;
+}
+
 
 .description {
 	font-style: bold;
