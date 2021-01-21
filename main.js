@@ -170,6 +170,58 @@ $(document).ready(function() {
 		localStorage.setItem("totalCost", cost);
 		$("#removePrice").html(`Total Cost: $ ${cost}`);//updates total cost when delivery is selected
 	}
+
+	// blog page filter selection
+	filterSelection("all") //execute the function and show all columns 
+
+	function filterSelection(c) {
+		let x, i;
+		x = document.getElementsByClassName("blog-col");
+		if(c == "all") c = "";
+		// add the show-blogs class to the filtered elements and remove the show-blogs class from the elements that aren't selected
+		for (i = 0; i < x.length; i++) {
+			removeBlog(x[i], "show-blogs");
+			if (x[i].className.indexOf(c) > -1) addBlog(x[i], "show-blogs")
+		}
+	}
+
+	//show filtered blogs
+	function addBlog(element, name) {
+		let i, arr1, arr2;
+		arr1 = element.className.split(" ");
+		arr2 = name.split(" ");
+		for (i = 0; i < arr2.length; i++) {
+			if (arr1.indexOf(arr2[i]) == -1) {
+				element.className += " " + arr2[i];
+			}
+		}
+	}
+
+	// hide blogs not selected
+	function removeBlog(element, name) {
+		let i, arr1, arr2;
+		arr1 = element.className.split(" ");
+		arr2 = name.split(" ");
+		for (i = 0; i < arr2.length; i++) {
+			while (arr1.indexOf(arr2[i]) > -1) {
+				arr1.splice(arr1.indexOf(arr2[i]), 1);
+			}
+		}
+		element.className = arr1.join(" ");
+	}
+
+	//add active class to the current button 
+	let btnContainer = document.getElementById("myBtnContainer");
+	let btns = btnContainer.getElementsByClassName("blog-btn");
+	for (let i = 0; i < btns.length; i++) {
+		btns[i].addEventListener("click", function(){
+			let current = document.getElementsByClassName("active");
+			current[0].className = current[0].className.replace(" active", "");
+			this.className += " active";
+		});
+	}
+
+
 //==========================================================END OF CODE======================================================================
 
 	

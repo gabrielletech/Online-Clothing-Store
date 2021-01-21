@@ -151,7 +151,14 @@ html {
 .opening {
 	width: 100%;
 	height: 100vh;
-	background-image: url('/images/photo-1490481651871-ab68de25d43d.jpg') no-repeat center;
+	background-image: url('/images/30813941_605432969816582_2440674596851463780_o.jpg');
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.blog-stories {
+	width: 100%;
+	margin: auto;
 }
 
 /* WELCOME SECTION */
@@ -800,6 +807,61 @@ div.vac-info {
 	text-align: center;
 	font-size: 18px;
 	padding: 10px;
+}
+
+/********************************************************************************************************************/
+
+/* BLOG PAGE */
+.blogs-title {
+	text-align: center;
+}
+
+.blog-btn {
+	display: block;
+	margin: auto;
+	display: inline;
+	background-color: #f3e9e9;
+	cursor: pointer;
+}
+
+.blog-btn:hover {
+	background-color: #ffeded;
+}
+
+.blog-btn.active {
+	background-color: #ffeded;
+}
+
+.blog-row {
+	margin: 8px -16px;
+}
+
+.trends,
+.tips,
+.news {
+	float: left;
+	width: 30%;
+	display: none;
+}
+
+.blog-row:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+.blog-content {
+	padding: 10px;
+}
+
+/* show-blogs class added to filtered elements */
+.show-blogs {
+	display: block;
+}
+
+.blog-image {
+	height: 500px;
+	width: 400px;
 }
 
 .description {
