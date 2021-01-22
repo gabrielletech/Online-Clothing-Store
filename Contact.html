@@ -1,50 +1,126 @@
 <!---------------------------------------------------- CODE ------------------------------------------------------------------------>
 <!DOCTYPE html>
 <html>
-<head>
-	<title>Contact Us | Industria</title>
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"><!--Link to bootstrap files -->
-	<link rel="stylesheet" type="text/css" href="mystyle.css"><!--Link to external stylesheet -->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	<script src="Industria.js"></script>
-</head>
-<body>
-	<header>
-		<ul>
-			<li class="cart">
-				<a style="color: #000000;" href="Shop.html">
-					<ion-icon name="cart-outline"></ion-icon>Cart<span>0</span><br><br>
-					<ion-icon name="logo-facebook"></ion-icon><br>
-					<ion-icon name="logo-instagram"></ion-icon><br>
-					<ion-icon name="logo-twitter"></ion-icon>
-				</a>
-			</li>	
-		</ul>
-	</header>
-	<img class="logo" src="images/IndustriaCollective.jpg" alt="industria logo">
-	<nav class="navbar navbar-light bg-light">
-		<a id="navItem" href="Home.html"> Home  |</a>
-		<a id="navItem" href="AboutUs.html"> About  | </a>
-		<a id="navItem" href="Catalogue.html"> Catalogue  |</a>
-		<a id="navItem" href="Shop.html"> Shopping Cart |</a>
-		<a id="navItem" href="ContactUs.html"> Contact Us |</a>
-		<form class="form-inline">
-            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"><!--Search form, to allow the user to search for something specific, and save time scrolling-->
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit" style="background-color: grey; border:  none; color: white;">Search</button> <!--Inline styling for specificity-->
-        </form>
-	</nav>
-	<br><br>
-	<h2 class="contact" style="text-align: center;"> Contact us </h2>
-	<p class="info">Feel free to email any queries to <a href="" class="contacts">info@industriacc.co.zw</a></p>
-	<p class="info">Or call/WhatsApp us on <a href="" class="contacts">+263779087232</a></p>
-	<br><br>
-	<hr class="line">
-	<footer>
-    	<p> &copy; Industria Collective Clothing.&nbsp;&nbsp; All Rights Reserved.&nbsp;&nbsp;</p>
-    	<p> Proudly created by Fadziso Ndoro</p>
-        <p>Last updated: February 2020</p>
-    </footer>
-<script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
-</body>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>Contact | Industria </title>
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- BOOTSTRAP -->
+		<link rel="stylesheet" 
+			href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
+			integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" 
+			crossorigin="anonymous"
+		>
+		<!-- CSS -->
+		<link rel="stylesheet" href="mystyle.css">
+		<!-- GOOGLE FONTS -->
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet">
+	</head>
+	<body>
+		<!-- NAV START -->
+		<header class="header">
+            <div>
+                <ul class="nav">
+                    <li class="nav-item">
+                        <a href="#" onclick="homeDropdown()" class="dropbtn">Home</a>
+                        <div id="myDropdown" class="dropdown-content">
+                            <a href="/Home.html#new-arrivals">New Arrivals</a>
+                            <a href="/Home.html#whats-new">Whats New?</a>
+                            <a href="/Home.html#products">Products</a>
+                            <a href="/Home.html#links">Links</a>
+                            <a href="/Home.html#tips&faqs">Tips & FAQs</a>
+                            <a href="/Home.html#connect">Connect With Us</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" onclick="shopDropdown()" class="dropbtn">Shop</a>
+                        <div id="myDropdown2" class="dropdown-content">
+                            <a href="/Shop.html">Shop All  <ion-icon name="chevron-forward-outline"></ion-icon></a>
+                            <a href="/Shop.html#dresses">Dresses</a>
+                            <a href="/Shop.html#tops">Tops</a>
+                            <a href="/Shop.html#pants">Pants & Bottoms</a>
+                            <a href="/Shop.html#shoes">Shoes</a>
+                            <a href="/Shop.html#accessories">Accessories</a>
+                            <a href="/Shop.html#loungewear">Loungewear</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" onclick="aboutDropdown()" class="dropbtn">About</a>
+                        <div id="myDropdown3" class="dropdown-content">
+                            <a href="/AboutUs.html#who">Who We Are</a>
+                            <a href="/AboutUs.html#meet">Meet The Team</a>
+                            <a href="/AboutUs.html#careers">Careers</a>
+                            <a href="/AboutUs.html#policy">Privacy Policy</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/Blog.html">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/Gallery.html">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/Contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="header-links">
+                <a href="Shop.html"><ion-icon name="cart-outline"></ion-icon><span>0</span></a>	
+            </div>
+        </header>
+		<!-- NAV END -->
+		
+		<h1 class="contact-title mt-5">Get In Touch</h1>
+		<div class="container contact-container">
+			<div>
+				<p class="contact-text">Swing by for a cup of coffee & a little retail therapy</p>
+			</div>
+			<div class="row contact-row">
+				<div class="col contact-col">
+					<img src="/images/14990930_344901982536350_6392879444844406940_o.jpg" alt="industria" />
+					<ul class="contact-info">
+						<li><ion-icon name="location-outline"></ion-icon>1 Hurworth Road, Highlands, Harare, Zimbabwe</li>
+						<li><ion-icon name="call-outline"></ion-icon>+263 77 908 7232</li>
+						<li><ion-icon name="mail-outline"></ion-icon>helloclotheszw@gmail.com</li>
+					</ul>
+					<p class="socials">
+						<a href="https://facebook.com/industriazw" target="_blank">
+							<ion-icon class="facebook" name="logo-facebook"></ion-icon>
+						</a>
+						<a href="https://instagram.com/industria_clothing_collective?igshid=1i2ldbc4i4abu" target="_blank">
+							<ion-icon class="instagram" name="logo-instagram"></ion-icon>
+						</a>
+					</p>
+				</div>
+				<div class="col contact-col">
+					<form>
+						<label for="firstname">First Name</label>
+						<input type="text" id="fname" name="firstname" placeholder="Your name..">
+						<label for="lastname">Last Name</label>
+						<input type="text" id="lname" name="lastname" placeholder="Your last name..">
+						<label for="country">Country</label>
+						<select id="country" name="country">
+						<option value="Zimbabwe">Zimbabwe</option>
+						<option value="South Africa">South Africa</option>
+						<option value="Namibia">Namibia</option>
+						</select>
+						<label for="subject">Subject</label>
+						<textarea id="subject" name="subject" placeholder="Write something.." style="height:170px"></textarea>
+						<input type="submit" value="Submit">
+					</form>
+					</form>
+				</div>
+			</div>
+		</div>
+		</div>
+	
+	
+		<script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
+		<script src="main.js" async defer></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	</body>
 </html>
 <!--------------------------------------------- END OF CODE ------------------------------------------------------------------------>

@@ -221,6 +221,26 @@ $(document).ready(function() {
 		});
 	}
 
+	/* Back to top on scroll button */
+	myButton = document.getElementById("myBtn");
+
+	// when the user scrolls down 20px from the top of the document, show the button
+	window.onscroll = function() {scrollFrunction()};
+
+	function scrollFunction() {
+		if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+			myButton.style.display = "block";
+		} else {
+			myButton.style.display = "none";
+		}
+	}
+
+	// when the user clicks the button, scroll to the top of the document
+	function topFunction() {
+		document.body.scrollTop = 0; // for Safari
+		document.documentElement.scrollTop = 0; // Chrome, Firefox, IE and Opera
+	}
+
 
 //==========================================================END OF CODE======================================================================
 
