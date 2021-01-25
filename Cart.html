@@ -4,176 +4,238 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<title>Shopping Cart | Industria</title>
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"><!--Link to bootstrap files -->
-	<link rel="stylesheet" type="text/css" href="mystyle.css"><!--Link to external stylesheet -->
-	<script src="bootstrap.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	<script src="Industria.js"></script>
-	<a name="back to top"></a> <!--Link for "back to top" to allow user to click their way back to the top of the page-->
+	<!-- BOOTSTRAP -->
+	<link rel="stylesheet" 
+		  href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
+		  integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" 
+		  crossorigin="anonymous"
+	>
+	<!-- CSS -->
+	<link rel="stylesheet" href="mystyle.css">
+	<!-- GOOGLE FONTS -->
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet">
 </head>
 <body>
-	<header>
-		<ul>
-			<li class="cart">
-				<a style="color: #000000;" href="Shop.html">
-					<ion-icon name="cart-outline"></ion-icon>Cart<span>0</span><br><br>
-					<ion-icon name="logo-facebook"></ion-icon><br>
-					<ion-icon name="logo-instagram"></ion-icon><br>
-					<ion-icon name="logo-twitter"></ion-icon>
-				</a>
-			</li>	
-		</ul>
-	</header>
-	<img class="logo" src="images/IndustriaCollective.jpg" alt="industria logo">
-	<nav class="navbar navbar-light bg-light">
-		<a id="navItem" href="Home.html"> Home  |</a>
-		<a id="navItem" href="AboutUs.html"> About  | </a>
-		<a id="navItem" href="Catalogue.html"> Catalogue  |</a>
-		<a id="navItem" href="Shop.html"> Shopping Cart  |</a>
-		<a id="navItem" href="ContactUs.html"> Contact Us  |</a>
-		<form class="form-inline">
-            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"><!--Search form, to allow the user to search for something specific, and save time scrolling-->
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit" style="background-color: grey; border:  none; color: white;">Search</button> <!--Inline styling for specificity-->
-        </form>
-	</nav><br><br>
+	<!-- NAV START -->
+	<header class="header">
+		<div>
+			<ul class="nav">
+				<li class="nav-item">
+					<a href="#" onclick="homeDropdown()" class="dropbtn">Home</a>
+					<div id="myDropdown" class="dropdown-content">
+						<a href="#new-arrivals">New Arrivals</a>
+						<a href="#whats-new">Whats New?</a>
+						<a href="#products">Products</a>
+						<a href="#links">Links</a>
+						<a href="#tips&faqs">Tips & FAQs</a>
+						<a href="#connect">Connect With Us</a>
+					</div>
+				</li>
+				<li class="nav-item">
+					<a href="#" onclick="shopDropdown()" class="dropbtn">Shop</a>
+					<div id="myDropdown2" class="dropdown-content">
+						<a href="/Shop.html">Shop All  <ion-icon name="chevron-forward-outline"></ion-icon></a>
+						<a href="/Shop.html#dresses">Dresses</a>
+						<a href="/Shop.html#tops">Tops</a>
+						<a href="/Shop.html#pants">Pants & Bottoms</a>
+						<a href="/Shop.html#shoes">Shoes</a>
+						<a href="/Shop.html#accessories">Accessories</a>
+						<a href="/Shop.html#loungewear">Loungewear</a>
+					</div>
+				</li>
+				<li class="nav-item">
+					<a href="#" onclick="aboutDropdown()" class="dropbtn">About</a>
+					<div id="myDropdown3" class="dropdown-content">
+						<a href="/AboutUs.html#who">Who We Are</a>
+						<a href="/AboutUs.html#meet">Meet The Team</a>
+						<a href="/AboutUs.html#careers">Careers</a>
+						<a href="/AboutUs.html#policy">Privacy Policy</a>
+					</div>
+				</li>
+				<li class="nav-item">
+					<a href="/Blog.html">Blog</a>
+				</li>
+				<li class="nav-item">
+					<a href="/Gallery.html">Gallery</a>
+				</li>
+				<li class="nav-item">
+					<a href="/Contact.html">Contact</a>
+				</li>
+			</ul>
+		</div>
+		<div class="header-links">
+			<a href="Shop.html"><ion-icon name="cart-outline"></ion-icon><span>0</span></a>	
+		</div>
+</header>
+<!-- NAV END -->
+
+	<!-- LOGO -->
+	<div class="cart-logo mt-3 mb-5">
+		<img src="images/industria.jpg" alt="image"  class="cart-logo"/>
+	</div>
+
 	<div class="items-container">
-			<div class="item-header">
-				<table class="table table-striped">
-						  <thead>
-							    <tr>
-							      <th scope="col">ITEM</th>
-							      <th scope="col">PRICE</th>
-							      <th scope="col">REMOVE</th>
-							    </tr>
-						  </thead>
-				</table><br><br><br>
-	</div><br><br><br><br>
+		<div class="item-header">
+			<table class="table table-striped">
+				<thead>
+					 <tr>
+						<th scope="col">ITEM</th>
+						<th scope="col">PRICE</th>
+						<th scope="col">REMOVE</th>
+					</tr>
+				</thead>
+			</table>
+		</div>
+	</div>
 
-			<div class="input-group mb-3">
-			    <input id="disCode" type="text" class="form-control" placeholder="Discount Code" aria-label="Discount Code" aria-describedby="button-addon2">
-			 	<div class="input-group-append">
-			    	<button onclick="discount()" class="btn btn-outline-secondary" type="button" id="button-addon2">Enter</button>
-			    </div>
-		    </div>
-		<div class="discount-form">
+	<!-- DELIVERY OPTIONS AND USER INFORMATION -->
+	<div class="container">
+		<div class="tab">
+			<button class="tablinks" onclick="checkoutOption(event, 'collect')">Collection</button>
+			<button class="tablinks" onclick="checkoutOption(event, 'delivery')">Delivery</button>
+		</div>
 
-		<ul class="nav nav-tabs" id="myTab" role="tablist">
-  <li class="nav-item">
-    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">
-    	<input type="radio" name="delivery" id="Collection" value="Collection">
-				<label for="Collection">Collection</label>
-	</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">
-    	<input onclick="calculateDelivery()" type="radio" name="delivery-radio" id="deliveryRadio"
-				value="Delivery">
-			<label for="delivery-radio">Delivery</label>
-	</a>
-  </li>
-</ul>
-<div class="tab-content" id="myTabContent">
-  <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab"><div class="container">
-  	<div class="form-row">
-    	<div class="col-md-4 mb-3">
-      		<label for="validationDefault01">First name</label>
-      		<input type="text" class="form-control" id="validationDefault01" value="Mark" required>
-    	</div>
-    	<div class="col-md-4 mb-3">
-      		<label for="validationDefault02">Last name</label>
-      		<input type="text" class="form-control" id="validationDefault02" value="Otto" required>
-    	</div>
-    	<div class="col-md-4 mb-3">
-      		<label for="validationDefaultUsername">Username</label>
-      		<div class="input-group">
-        		<div class="input-group-prepend">
-          			<span class="input-group-text" id="inputGroupPrepend2">@</span>
-        		</div>
-        		<input type="text" class="form-control" id="validationDefaultUsername"  aria-describedby="inputGroupPrepend2" required>
-      		</div>
-    	</div>
-  </div>
-  <div class="form-row">
-    	<div class="col-md-6 mb-3">
-	      <label for="validationDefault03">City</label>
-	      <input type="text" class="form-control" id="validationDefault03" required>
-    	</div>
-    		<div class="col-md-3 mb-3">
-	      		<label for="validationDefault04">State</label>
-	      			<select class="custom-select" id="validationDefault04" required>
-		        		<option selected disabled value="">Choose...</option>
-		        		<option>...</option>
-      	  			</select>
-    		</div>
-   				<div class="col-md-3 mb-3">
-      				<label for="validationDefault05">Zip</label>
-      				<input type="text" class="form-control" id="validationDefault05" required>
-   				</div>
-  </div>
-  	<div class="form-group">
-    	<div class="form-check">
-      		<input class="form-check-input" type="checkbox" value="" id="invalidCheck2" required>
-      		<label class="form-check-label" for="invalidCheck2">Agree to terms and conditions
-      		</label>
-    	</div>
-  </div>
-  <button class="btn btn-primary" type="submit">Submit form</button>
-</div></div>
-  <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab"><form>
-  <div class="form-row">
-    	<div class="form-group col-md-6">
-      		<label for="inputEmail4">Email</label>
-      		<input type="email" class="form-control" id="inputEmail4">
-    	</div>
-    		<div class="form-group col-md-6">
-      			<label for="inputPassword4">Password</label>
-      			<input type="password" class="form-control" id="inputPassword4">
-    		</div>
-  		</div>	
-  			<div class="form-group">
-    			<label for="inputAddress">Address</label>
-    			<input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
-  			</div>
-  				<div class="form-group">
-    				<label for="inputAddress2">Address 2</label>
-    				<input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
-  				</div>
-  			<div class="form-row">
-    <div class="form-group col-md-6">
-      <label for="inputCity">City</label>
-      <input type="text" class="form-control" id="inputCity">
-    </div>
-    <div class="form-group col-md-4">
-      <label for="inputState">State</label>
-      <select id="inputState" class="form-control">
-        <option selected>Choose...</option>
-        <option>...</option>
-      </select>
-    </div>
-    <div class="form-group col-md-2">
-      <label for="inputZip">Zip</label>
-      <input type="text" class="form-control" id="inputZip">
-    </div>
-  </div>
-  <div class="form-group">
-    <div class="form-check">
-      <input class="form-check-input" type="checkbox" id="gridCheck">
-      <label class="form-check-label" for="gridCheck">
-        Check me out
-      </label>
-    </div>
-  </div>
-  <button type="submit" class="btn btn-primary">Sign in</button>
-</form></div>
-</div>
-	</div><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-		
-	<hr class="line">
- 	<footer>
-    	<p> &copy; Industria Collective Clothing.&nbsp;&nbsp; All Rights Reserved.&nbsp;&nbsp;</p>
-    	<p> Proudly created by Fadziso Ndoro</p>
-        <p>Last updated: February 2020</p>
-    </footer>		
-<script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>	
+		<!-- TAB CONTENT -->
+		<div id="collect" class="tabcontent">
+			<div class="row cart-row">
+				<div class="col-75">
+				  <div class="container cart-container">
+					<form>
+			  
+					  <div class="row cart-row">
+						<div class="col-50">
+						  <h3>Billing Address</h3>
+						  <label class="cart-label" for="fname"><ion-icon name="person-circle-outline"></ion-icon></i> Full Name</label>
+						  <input type="text" id="fname" name="firstname" placeholder="...">
+						  <label class="cart-label" for="email"><ion-icon name="mail-outline"></ion-icon></i> Email</label>
+						  <input type="text" id="email" name="email" placeholder="...">
+						  <label class="cart-label" for="adr"><ion-icon name="home-outline"></ion-icon></i> Address</label>
+						  <input type="text" id="adr" name="address" placeholder="...">
+						  <label class="cart-label" for="city"><ion-icon name="business-outline"></ion-icon></i> City</label>
+						  <input type="text" id="city" name="city" placeholder="...">
+			  
+						  <div class="row cart-row">
+							<div class="col-50">
+							  <label class="cart-label" for="state">State</label>
+							  <input type="text" id="state" name="state" placeholder="...">
+							</div>
+							<div class="col-50">
+							  <label class="cart-label" for="zip">Zip</label>
+							  <input type="text" id="zip" name="zip" placeholder="...">
+							</div>
+						  </div>
+						</div>
+			  
+						<div class="col-50">
+						  <h3>Payment</h3>
+						  <label class="cart-label" for="fname">Accepted Cards</label>
+						  <div class="icon-container">
+							<ion-icon name="card-outline"></ion-icon>
+							<ion-icon name="logo-paypal"></ion-icon>
+						  </div>
+						  <label class="cart-label" for="cname">Name on Card</label>
+						  <input type="text" id="cname" name="cardname" placeholder="...">
+						  <label class="cart-label" for="ccnum">Credit card number</label>
+						  <input type="text" id="ccnum" name="cardnumber" placeholder="...">
+						  <label class="cart-label" for="expmonth">Exp Month</label>
+						  <input type="text" id="expmonth" name="expmonth" placeholder="...">
+			  
+						  <div class="row cart-row">
+							<div class="col-50">
+							  <label class="cart-label" for="expyear">Exp Year</label>
+							  <input type="text" id="expyear" name="expyear" placeholder="...">
+							</div>
+							<div class="col-50">
+							  <label class="cart-label" for="cvv">CVV</label>
+							  <input type="text" id="cvv" name="cvv" placeholder="...">
+							</div>
+						  </div>
+						</div>
+			  
+					  </div>
+					  <label class="cart-label">
+						<input type="checkbox" checked="checked" name="sameadr"> Shipping address same as billing
+					  </label>
+					  <input type="submit" value="Continue to checkout" class="cart-btn">
+					</form>
+				  </div>
+				</div>
+			</div>
+		</div>
+
+		<div id="delivery" class="tabcontent">
+			<div class="row cart-row">
+				<div class="col-75">
+				  <div class="container cart-container">
+					<form>
+			  
+					  <div class="row cart-row">
+						<div class="col-50">
+						  <h3>Billing Address</h3>
+						  <label class="cart-label" for="fname"><ion-icon name="person-circle-outline"></ion-icon></i> Full Name</label>
+						  <input type="text" id="fname" name="firstname" placeholder="...">
+						  <label class="cart-label" for="email"><ion-icon name="mail-outline"></ion-icon></i> Email</label>
+						  <input type="text" id="email" name="email" placeholder="...">
+						  <label class="cart-label" for="adr"><ion-icon name="home-outline"></ion-icon></i> Address</label>
+						  <input type="text" id="adr" name="address" placeholder="...">
+						  <label class="cart-label" for="city"><ion-icon name="business-outline"></ion-icon></i> City</label>
+						  <input type="text" id="city" name="city" placeholder="...">
+			  
+						  <div class="row cart-row">
+							<div class="col-50">
+							  <label class="cart-label" for="state">State</label>
+							  <input type="text" id="state" name="state" placeholder="...">
+							</div>
+							<div class="col-50">
+							  <label class="cart-label" for="zip">Zip</label>
+							  <input type="text" id="zip" name="zip" placeholder="...">
+							</div>
+						  </div>
+						</div>
+			  
+						<div class="col-50">
+						  <h3>Payment</h3>
+						  <label class="cart-label" for="fname">Accepted Cards</label>
+						  <div class="icon-container">
+							<ion-icon name="card-outline"></ion-icon>
+							<ion-icon name="logo-paypal"></ion-icon>
+						  </div>
+						  <label class="cart-label" for="cname">Name on Card</label>
+						  <input type="text" id="cname" name="cardname" placeholder="...">
+						  <label class="cart-label" for="ccnum">Credit card number</label>
+						  <input type="text" id="ccnum" name="cardnumber" placeholder="...">
+						  <label class="cart-label" for="expmonth">Exp Month</label>
+						  <input type="text" id="expmonth" name="expmonth" placeholder="...">
+			  
+						  <div class="row cart-row">
+							<div class="col-50">
+							  <label class="cart-label" for="expyear">Exp Year</label>
+							  <input type="text" id="expyear" name="expyear" placeholder="...">
+							</div>
+							<div class="col-50">
+							  <label class="cart-label" for="cvv">CVV</label>
+							  <input type="text" id="cvv" name="cvv" placeholder="...">
+							</div>
+						  </div>
+						</div>
+			  
+					  </div>
+					  <label class="cart-label">
+						<input type="checkbox" checked="checked" name="sameadr"> Shipping address same as billing
+					  </label>
+					  <input type="submit" value="Continue to checkout" class="cart-btn">
+					</form>
+				  </div>
+				</div>
+			</div>
+		</div>
+	</div>
+  
+ 			
+	<script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
+	<script src="bootstrap.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="main.js"></script>	
 </body>
 </html>

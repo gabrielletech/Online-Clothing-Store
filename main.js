@@ -241,6 +241,28 @@ $(document).ready(function() {
 		document.documentElement.scrollTop = 0; // Chrome, Firefox, IE and Opera
 	}
 
+	// TABS
+	function checkoutOption(evt, option) {
+		let i, tabcontent, tablinks;
+	
+
+	// get all elements "tabcontent" and hide them 
+	tabcontent = document.getElementsByClassName("tabcontent");
+	for (i = 0; i < tabcontent.length; i++) {
+		tabcontent[i].style.display = "none";
+	}
+
+	//get all elements "tablinks" and remove the class active
+	tablinks = document.getElementsByClassName("tablinks");
+	for (i = 0; i < tablinks.length; i++) {
+		tablinks[i].className = tablinks[i].className.replace(" active", "");
+	}
+
+	// show the current tab and add active class to the btn that opened the tab 
+	document.getElementById(option).style.display = "block";
+	evt.currentTarget.className += " active";
+}
+
 
 //==========================================================END OF CODE======================================================================
 
