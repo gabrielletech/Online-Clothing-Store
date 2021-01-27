@@ -5,33 +5,19 @@
 
 	let Item = [//array of item objects
 		{
-			name:"Flowery One-Piece",
-			color:"White & Red",
-			image: "images/cloth11.jpg",
-			price: 20,
+			name:"Polka Dot Mini",
+			image: "/images/119469273_1257141594645713_3489490998363617874_n.jpg",
+			price: 8.99,
 			inCart: 0,
 		},
+
 		{
-			name:"Ruffly Two-Piece",
-			image:"images/cloth9.jpg",
-			color:"Red",
-			price: 25,
-			inCart: 0,
-		},
-		{
-			name:"Black Playsuit",
-			image: "images/cloth4.jpg",
-			color:"Striped Cream",
-			price: 15,
-			inCart: 0,
-		},
-		{
-			name:"Front tie Shirt Dress",
-			image: "images/cloth17.jpg",
-			color:"Light Blue",
-			price: 30,
+			name: "Exotic Maxi Dress",
+			image: "/images/115889193_1215859095440630_3124536734724679976_n.jpg",
+			price: 11.99,
 			inCart: 0,
 		}
+		
 	];
 
 	// function for dropdown menu 
@@ -70,13 +56,26 @@ $(document).ready(function() {
 
 
 	for (i in Item) {//for in loop to display catalogue items on the catalogue page
-		$(".shop-container").append(
-			`<div class="image">
-		    	<img src="${Item[i].image}" alt="${Item[i].name}" class="cataPic responsive rounded">
-		    	<h3 class="shopItem">${Item[i].name}</h3>
-		    	<h3 class="price">$${Item[i].price}</h3>
-		    	<button onclick="add(${i})" class="add-cart cart1"> Quick Add to Cart </button>
-    		</div>`)
+		$(".product-items").append(
+			`<li>
+				<div class="box">
+					<div class="slide-img">
+						<img src="${Item[i].image}" alt="image" />
+					</div>
+					<div class="detail-box">
+						<div class="type">
+							<a href="#">${Item[i].name}</a>
+							<span>NEW</span>
+							<small class="in-stock">In Stock</small>
+							<a href="#" class="price">$ ${Item[i].price}</a>
+							<div class="action-btn">
+								<button onclick="add(${i})" class="add-cart">Add to Cart</button>
+								<ion-icon class="like" name="heart"></ion-icon>
+							</div>
+						</div>  
+					</div>
+				</div>
+            </li>`)
 	}
 
 	cartItems = JSON.parse(localStorage.getItem("cartItems"));
@@ -124,7 +123,7 @@ $(document).ready(function() {
 
 
 	function cartNumbers() {// function that adds cart numbers to the cart icon span
-		document.querySelector(".cart span").textContent = cartItems.length;
+		document.querySelector(".shop-cart span").textContent = cartItems.length;
 	}
 
 

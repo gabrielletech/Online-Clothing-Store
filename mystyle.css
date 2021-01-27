@@ -466,28 +466,47 @@ hr.line {
 
 /* FOOTER SECTION */
 .footer-section{
-	height: 50vh;
+	height: 40vh;
 	width: 100%;
-	margin: 40px;
+	margin-top: 40px;
+	margin-bottom: 5px;
 	padding: 20px;
-	display: flexbox;
+	
 }
 
 .footer-items li {
 	list-style-type: none;
 	font-size: 16px;
 	justify-content: space-between;
+	color: #808080;
 	
 }
 
-.footer-header {
-	text-align: center;
+.footer-items li a {
+	color: #808080;
 }
 
 .footer-logo {
 	height: 120px;
 	width: 120px;
 }
+
+.footer-header {
+	font-weight: bold;
+	color: #000000;
+}
+
+.social-icons {
+	font-size: 24px;
+}
+
+.bottom-text {
+	font-size: 12px;
+	position: absolute;
+	right: 0;
+	margin-top: 10px;
+}
+
 
 /*********************************************************************************************************************/
 /* SHOP PAGE*/
@@ -1295,56 +1314,38 @@ input[type=submit]:hover {
 	margin-left: 570px;
 }
 
-.reviews {
-	font-family: Adobe FangSong Std R;
-	margin-left: 10px;
-}
+
 
 
 @keyframes mymove {
 	50% {box-shadow: 10px 20px 30px grey;}
 }
 
-.seeMore2 {
-	margin-left: 10px;
+.in-stock {
+	color: #008000;
 }
 
-.clothDescription {
-	font-style: bold;
-	margin-left: 200px;
+.out-stock {
+	color: #ff0000;
 }
 
-.inStock {
-	color: green;
-	margin-left: 220px;
+.like {
+	font-size: 24px;
+	cursor: pointer;
+	margin-left: 140px;
 }
 
 .price {
 	font-style: bold;
 }
 
-.outStock {
-	color: red;
-	margin-left: 210px;
-}
-
 .table {
 	border: solid, black;
-}
-
-.loyaltyInfo {
-	display: block;
-	margin: auto;
 }
 
 #yourCart {
 	text-align: center;
 
-}
-
-.col-3,
-.col-6 {
-	text-decoration: underline;
 }
 
 #quantityNum {
@@ -1356,15 +1357,21 @@ input[type=submit]:hover {
 	margin-right: 150px;
 }
 
-
-h3 {
-	margin-left: 120px;
+.add-cart {
+	color: black;
+	padding: 10px;
+	border: 1px solid #ccc;
+	background: #ffeded;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-ms-border-radius: 5px;
+	-o-border-radius: 5px;
 }
 
-.add-cart {
-	margin-left: 120px;
-	color: black;
-	cursor: pointer;
+.add-cart:hover {
+	background-color: #000;
+	color: #ffeded;
 }
 
 #cart-icon {

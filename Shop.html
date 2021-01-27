@@ -40,6 +40,7 @@
         <div class="sidebar">
             <a href="/Home.html">
                 <img src="/images/industria.jpg" class="header-logo" alt="logo"/>
+                <a class="shop-cart" href="Cart.html"><ion-icon class="shop-cart" name="cart-outline"></ion-icon><span>0</span></a>	
             </a>
             <a href="/Home.html">Home</a>
             <a class="active" href="#shop">Shop</a>
@@ -93,24 +94,11 @@
             <div class="container">
                 <h1 class="shop-title mt-3">Dresses</h1>
                 <ul class="product-items">
-                    <li class="item-a">
-                        <div class="box">
-                            <div class="slide-img">
-                               <img src="/images/119469273_1257141594645713_3489490998363617874_n.jpg" alt="image" />
-                            </div>
-                            <div class="detail-box">
-                               <div class="type">
-                                   <a href="#">Polka Dot Mini Dress</a>
-                                   <span>NEW</span>
-                                   <a href="#" class="price">$8.99</a>
-                                   <div class="action-btn">
-                                       <button class="btn btn-outline-primary">Add to Cart</button>  
-                                   </div>
-                               </div>  
-                            </div>
-                       </div>
-                    </li>
-                    <li class="item-b">
+
+                </ul>
+                    
+                            
+                   <!-- <li class="item-b">
                         <div class="box">
                             <div class="slide-img">
                                <img src="/images/115889193_1215859095440630_3124536734724679976_n.jpg" alt="image" />
@@ -118,10 +106,11 @@
                             <div class="detail-box">
                                <div class="type">
                                    <a href="#">Exotic Maxi Dress</a>
-                                   <span>NEW</span>
+                                   <span><small class="in-stock">In Stock</small></span>
                                    <a href="#" class="price">$14.99</a>
                                    <div class="action-btn">
-                                       <button class="btn btn-outline-primary">Add to Cart</button>
+                                       <button class="add-cart">Add to Cart</button>
+                                       <ion-icon class="like" name="heart"></ion-icon>
                                    </div>
                                </div>
                                
@@ -136,11 +125,11 @@
                             <div class="detail-box">
                                <div class="type">
                                    <a href="#">One Arm LBD</a>
-                                   <span>NEW</span>
+                                   <span><small class="out-stock">Out of Stock</small></span>
                                    <a href="#" class="price">$10.99</a>
                                    <div class="action-btn">
-                                       <button class="btn btn-outline-primary">Add to Cart</button>
-                                       
+                                       <button class="add-cart">Add to Cart</button>
+                                       <ion-icon class="like" name="heart"></ion-icon>
                                    </div>
                                </div>
                                
@@ -151,7 +140,7 @@
             </div>
         </section>
 
-        <!-- TOPS -->
+        // TOPS 
         <section id="tops" class="tops">
             <div class="container">
                 <h1 class="shop-title mt-3">Tops</h1>
@@ -164,10 +153,11 @@
                             <div class="detail-box">
                                <div class="type">
                                    <a href="#">Seamless Bandeu</a>
-                                   <span>NEW</span>
+                                   <span><small class="in-stock">In Stock</small></span>
                                    <a href="#" class="price">$4.99</a>
                                    <div class="action-btn">
-                                       <button class="btn btn-outline-primary">Add to Cart</button>  
+                                       <button class="add-cart">Add to Cart</button>
+                                       <ion-icon class="like" name="heart"></ion-icon>  
                                    </div>
                                </div>  
                             </div>
@@ -181,11 +171,11 @@
                             <div class="detail-box">
                                <div class="type">
                                    <a href="#">Sleeveless Tank Top</a>
-                                   <span>NEW</span>
+                                   <span><small class="in-stock">In Stock</small></span>
                                    <a href="#" class="price">$5.99</a>
                                    <div class="action-btn">
-                                       <button class="btn btn-outline-primary">Add to Cart</button>
-                                       
+                                       <button class="add-cart">Add to Cart</button>
+                                       <ion-icon class="like" name="heart"></ion-icon>
                                    </div>
                                </div>
                                
@@ -201,10 +191,11 @@
                                <div class="type">
                                    <a href="#">Boxy Cropped Collar Shirt</a>
                                    <span>NEW</span>
+                                   <small class="in-stock">In Stock</small>
                                    <a href="#" class="price">$7.99</a>
                                    <div class="action-btn">
-                                       <button class="btn btn-outline-primary">Add to Cart</button>
-                                       
+                                       <button class="add-cart">Add to Cart</button>
+                                       <ion-icon class="like" name="heart"></ion-icon>
                                    </div>
                                </div>
                                
@@ -215,7 +206,7 @@
             </div> 
         </section>
 
-        <!-- PANTS & BOTTOMS -->
+        // PANTS & BOTTOMS 
         <section id="bottoms" class="bottoms">
             <div class="container">
                 <h1 class="shop-title mt-3">Pants & Bottoms</h1>
@@ -228,10 +219,11 @@
                             <div class="detail-box">
                                <div class="type">
                                    <a href="#">Classic Mom Jeans</a>
-                                   <span>NEW</span>
+                                   <span><small class="out-stock">Out of Stock</small></span>
                                    <a href="#" class="price">$14.99</a>
                                    <div class="action-btn">
-                                       <button class="btn btn-outline-primary">Add to Cart</button>  
+                                       <button class="add-cart">Add to Cart</button> 
+                                       <ion-icon class="like" name="heart"></ion-icon> 
                                    </div>
                                </div>  
                             </div>
@@ -245,11 +237,11 @@
                             <div class="detail-box">
                                <div class="type">
                                    <a href="#">Slim Fit Cargo Pants</a>
-                                   <span>NEW</span>
+                                   <small class="in-stock">In Stock</small>
                                    <a href="#" class="price">$18.99</a>
                                    <div class="action-btn">
-                                       <button class="btn btn-outline-primary">Add to Cart</button>
-                                       
+                                       <button class="add-cart">Add to Cart</button>
+                                       <ion-icon class="like" name="heart"></ion-icon>
                                    </div>
                                </div>
                                
@@ -264,11 +256,11 @@
                             <div class="detail-box">
                                <div class="type">
                                    <a href="#">Shorts</a>
-                                   <span>NEW</span>
+                                   <small class="in-stock">In Stock</small>
                                    <a href="#" class="price">$11.99</a>
                                    <div class="action-btn">
-                                       <button class="btn btn-outline-primary">Add to Cart</button>
-                                       
+                                       <button class="add-cart">Add to Cart</button>
+                                       <ion-icon class="like" name="heart"></ion-icon>
                                    </div>
                                </div>
                                
@@ -279,7 +271,7 @@
             </div>
         </section>
 
-        <!-- SHOES -->
+        // SHOES 
         <section id="shoes" class="shoes">
             <div class="container">
                 <h1 class="shop-title mt-3">Shoes</h1>
@@ -293,9 +285,11 @@
                                <div class="type">
                                    <a href="#">Sandals</a>
                                    <span>NEW</span>
+                                   <small class="in-stock">In Stock</small>
                                    <a href="#" class="price">$12.99</a>
                                    <div class="action-btn">
-                                       <button class="btn btn-outline-primary">Add to Cart</button>  
+                                       <button class="add-cart">Add to Cart</button> 
+                                       <ion-icon class="like" name="heart"></ion-icon> 
                                    </div>
                                </div>  
                             </div>
@@ -309,11 +303,11 @@
                             <div class="detail-box">
                                <div class="type">
                                    <a href="#">Black Stilleto</a>
-                                   <span>NEW</span>
+                                   <small class="in-stock">In Stock</small>
                                    <a href="#" class="price">$18.99</a>
                                    <div class="action-btn">
-                                       <button class="btn btn-outline-primary">Add to Cart</button>
-                                       
+                                       <button class="add-cart">Add to Cart</button>
+                                       <ion-icon class="like" name="heart"></ion-icon>
                                    </div>
                                </div>
                                
@@ -328,11 +322,11 @@
                             <div class="detail-box">
                                <div class="type">
                                    <a href="#">Espadrilles</a>
-                                   <span>NEW</span>
+                                   <small class="in-stock">In Stock</small>
                                    <a href="#" class="price">$10.99</a>
                                    <div class="action-btn">
-                                       <button class="btn btn-outline-primary">Add to Cart</button>
-                                       
+                                       <button class="add-cart">Add to Cart</button>
+                                       <ion-icon class="like" name="heart"></ion-icon>
                                    </div>
                                </div>
                                
@@ -343,7 +337,7 @@
             </div>
         </section>
 
-        <!-- ACCESSORIES -->
+        // ACCESSORIES
         <section id="accessories" class="accessories">
             <div class="container">
                 <h1 class="shop-title mt-3">Accessories</h1>
@@ -356,10 +350,11 @@
                             <div class="detail-box">
                                <div class="type">
                                    <a href="#">Pink Sunglasses</a>
-                                   <span>NEW</span>
+                                   <small class="in-stock">In Stock</small>
                                    <a href="#" class="price">$5.99</a>
                                    <div class="action-btn">
-                                       <button class="btn btn-outline-primary">Add to Cart</button>  
+                                       <button class="add-cart">Add to Cart</button>
+                                       <ion-icon class="like" name="heart"></ion-icon> 
                                    </div>
                                </div>  
                             </div>
@@ -373,10 +368,11 @@
                             <div class="detail-box">
                                <div class="type">
                                    <a href="#">Sunny Hat</a>
-                                   <span>NEW</span>
+                                   <span><small class="out-stock">Out of Stock</small></span>
                                    <a href="#" class="price">$6.99</a>
                                    <div class="action-btn">
-                                       <button class="btn btn-outline-primary">Add to Cart</button>
+                                       <button class="add-cart">Add to Cart</button>
+                                       <ion-icon class="like" name="heart"></ion-icon>
                                    </div>
                                </div>
                                
@@ -391,11 +387,11 @@
                             <div class="detail-box">
                                <div class="type">
                                    <a href="#">All Purpose Handbag</a>
-                                   <span>NEW</span>
+                                   <small class="in-stock">In Stock</small>
                                    <a href="#" class="price">$20.99</a>
                                    <div class="action-btn">
-                                       <button class="btn btn-outline-primary">Add to Cart</button>
-                                       
+                                       <button class="add-cart">Add to Cart</button>
+                                       <ion-icon class="like" name="heart"></ion-icon>
                                    </div>
                                </div>
                                
@@ -406,7 +402,7 @@
             </div>
         </section>
 
-        <!-- LOUNGEWEAR -->
+         LOUNGEWEAR 
         <section id="loungewear" class="loungewear">
             <div class="container">
                 <h1 class="shop-title mt-3">Loungewear</h1>
@@ -419,10 +415,11 @@
                             <div class="detail-box">
                                <div class="type">
                                    <a href="#">Joggers</a>
-                                   <span>NEW</span>
+                                   <small class="in-stock">In Stock</small>
                                    <a href="#" class="price">$10.99</a>
                                    <div class="action-btn">
-                                       <button class="btn btn-outline-primary">Add to Cart</button>  
+                                       <button class="add-cart">Add to Cart</button>
+                                       <ion-icon class="like" name="heart"></ion-icon> 
                                    </div>
                                </div>  
                             </div>
@@ -436,11 +433,11 @@
                             <div class="detail-box">
                                <div class="type">
                                    <a href="#">Navy Soft Suit</a>
-                                   <span>NEW</span>
+                                   <small class="in-stock">In Stock</small>
                                    <a href="#" class="price">$14.99</a>
                                    <div class="action-btn">
-                                       <button class="btn btn-outline-primary">Add to Cart</button>
-                                       
+                                       <button onclick="add(Item)" class="add-cart">Add to Cart</button>
+                                       <ion-icon class="like" name="heart"></ion-icon>
                                    </div>
                                </div>
                                
@@ -456,10 +453,11 @@
                                <div class="type">
                                    <a href="#">Relaxed Pants Suit</a>
                                    <span>NEW</span>
+                                   <small class="in-stock">In Stock</small>
                                    <a href="#" class="price">$16.99</a>
                                    <div class="action-btn">
-                                       <button class="btn btn-outline-primary">Add to Cart</button>
-                                       
+                                       <button class="add-cart">Add to Cart</button>
+                                       <ion-icon class="like" name="heart" title="Add to Wishlist"></ion-icon>
                                    </div>
                                </div>
                                
@@ -468,9 +466,10 @@
                     </li>
                 </ul>  
             </div>
-        </section>
+        </section> -->
 
-        
+        <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="/main.js" async defer></script>
         
     </body>

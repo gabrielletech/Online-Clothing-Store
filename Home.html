@@ -66,7 +66,7 @@
 				</ul>
 			</div>
 			<div class="header-links">
-				<a href="Shop.html"><ion-icon name="cart-outline"></ion-icon><span>0</span></a>	
+				<a class="shop-cart" href="Cart.html"><ion-icon name="cart-outline"></ion-icon><span>0</span></a>	
 			</div>
 	</header>
 	<!-- NAV END -->
@@ -171,8 +171,9 @@
 			<div class="container-fluid">
 				<div class="row align-items-center">
 					<div class="col col-md-5">
-						<img class="footer-logo" src="/images/IndustriaCollective.jpg" alt="footer-logo" />
+						
 						<ul class="footer-items">
+							<li><img class="footer-logo" src="/images/IndustriaCollective.jpg" alt="footer-logo" /></li>
 							<li><ion-icon name="location-outline"></ion-icon>1 Hurworth Road, Highlands, Harare, Zimbabwe</li>
 							<li><ion-icon name="call-outline"></ion-icon>+263 77 908 7232</li>
 							<li><ion-icon name="mail-outline"></ion-icon>helloclotheszw@gmail.com</li>
@@ -180,8 +181,8 @@
 					</div>
 
 					<div class="col col-md-2">
-						<h5 class="footer-header" id="links">Links</h5>
 						<ul class="footer-items">
+							<li><h5 class="footer-header" id="links">Links</h5></li>
 							<li><a href="/Shop.html" id="products">Products</a></li>
 							<li><a href="/Blog.html">Blog</a></li>
 							<li><a href="/AboutUs.html" id="careers">Careers</a></li>
@@ -191,24 +192,27 @@
 					</div>
 
 					<div class="col col-md-2">
-						<h5>Shop</h5>
 						<ul class="footer-items">
-							<li>Catalog</li>
-							<li>Trending</li>
-							<li>Gallery</li>
+							<li><h5 class="footer-header" id="shop">Shop</h5></li>
+							<li><a href="/Shop.html#new-arrivals">Catalog</a></li>
+							<li><a href="/Shop.html#new-arrivals">Trending</a></li>
+							<li><a href="/Gallery.html">Gallery</a></li>
 							<li>Rewards</li>
 							<li>Returns Policy</li>
 						</ul>	
 					</div>
 
 					<div class="col col-md-2">
-						<h5 id="connect">Connect With Us: </h5>
-						<ion-icon name="logo-facebook"></ion-icon>
-						<ion-icon name="logo-instagram"></ion-icon>
-						<ion-icon name="logo-whatsapp"></ion-icon>
+						<h5 id="connect" class="footer-header">Connect With Us: </h5>
+						<ion-icon class="social-icons" name="logo-facebook"></ion-icon>
+						<ion-icon class="social-icons" name="logo-instagram"></ion-icon>
+						<ion-icon class="social-icons" name="logo-whatsapp"></ion-icon>
 					</div>
 				</div>
 			</div>
+			<div>
+				<p class="bottom-text">&copy; 2021 Industria ZW</p>
+			</div>	
 		</footer>
     </section>
 	<script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
