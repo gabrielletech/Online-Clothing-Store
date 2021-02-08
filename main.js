@@ -16,7 +16,49 @@
 			image: "/images/115889193_1215859095440630_3124536734724679976_n.jpg",
 			price: 11.99,
 			inCart: 0,
-		}
+		},
+
+		{
+			name: "One Arm LBD",
+			image: "/images/0022551_cotton-one-shoulder-bodycon-dress_400.jpeg",
+			price: 10.99,
+			inCart: 0,
+		},
+
+		{
+			name: "One Arm LBD",
+			image: "/images/0022551_cotton-one-shoulder-bodycon-dress_400.jpeg",
+			price: 10.99,
+			inCart: 0,
+		},
+
+		{
+			name: "One Arm LBD",
+			image: "/images/0022551_cotton-one-shoulder-bodycon-dress_400.jpeg",
+			price: 10.99,
+			inCart: 0,
+		},
+
+		{
+			name: "One Arm LBD",
+			image: "/images/0022551_cotton-one-shoulder-bodycon-dress_400.jpeg",
+			price: 10.99,
+			inCart: 0,
+		},
+
+		{
+			name: "One Arm LBD",
+			image: "/images/0022551_cotton-one-shoulder-bodycon-dress_400.jpeg",
+			price: 10.99,
+			inCart: 0,
+		},
+
+		{
+			name: "One Arm LBD",
+			image: "/images/0022551_cotton-one-shoulder-bodycon-dress_400.jpeg",
+			price: 10.99,
+			inCart: 0,
+		},
 		
 	];
 
@@ -51,28 +93,22 @@
 
 $(document).ready(function() {
 
-	let h2 = $(".contact");//jQuery function that animates the heading on the ContactUs.html page
-	h2.animate({fontSize: '3em'}, "slow");
-
-
 	for (i in Item) {//for in loop to display catalogue items on the catalogue page
 		$(".product-items").append(
 			`<li>
-				<div class="box">
-					<div class="slide-img">
-						<img src="${Item[i].image}" alt="image" />
-					</div>
-					<div class="detail-box">
-						<div class="type">
+				<div class="product">
+						<img src="${Item[i].image}" alt="image" class="product-image"/>
+						<div class="product-name">
 							<a href="#">${Item[i].name}</a>
-							<span>NEW</span>
-							<small class="in-stock">In Stock</small>
-							<a href="#" class="price">$ ${Item[i].price}</a>
-							<div class="action-btn">
-								<button onclick="add(${i})" class="add-cart">Add to Cart</button>
-								<ion-icon class="like" name="heart"></ion-icon>
-							</div>
-						</div>  
+						</div>
+						<small class="in-stock">In Stock</small>
+						<div class="price">
+							<a href="#">$ ${Item[i].price}</a>
+						</div>
+						<div class="action-btn">
+							<button onclick="add(${i})" class="add-cart">Add to Cart</button>
+							<ion-icon class="wishlist" name="heart"></ion-icon>
+						</div>	 
 					</div>
 				</div>
             </li>`)
@@ -112,7 +148,7 @@ $(document).ready(function() {
 		
 	}
 
-	function removeItem(i) {//functionality for the remove button to remove items from cart onclick
+	function removeItem(i) {// remove items from cart onclick
 		cartItems.splice(Item[i], 1);
 		localStorage.setItem("cartItems", JSON.stringify(cartItems));
 		let action = event.target;
@@ -122,7 +158,7 @@ $(document).ready(function() {
 	}
 
 
-	function cartNumbers() {// function that adds cart numbers to the cart icon span
+	function cartNumbers() {// adds cart numbers to the cart icon span
 		document.querySelector(".shop-cart span").textContent = cartItems.length;
 	}
 
@@ -260,7 +296,31 @@ $(document).ready(function() {
 	// show the current tab and add active class to the btn that opened the tab 
 	document.getElementById(option).style.display = "block";
 	evt.currentTarget.className += " active";
+
+
+	// SHOP PAGE NAVBAR
+
+	// When the user scrolls the page, execute navScroll
+	window.onscroll = function() {navScroll()};
+
+	// get the navbar 
+	let navbar = document.getElementById("navbar");
+
+	// get offset position of the navbar
+	let sticky = navbar.offsetTop;
+
+	// add the sticky class to the navbar whe  you reach its scroll position. Remove "sticky" when you leave the scroll position
+	function navScroll() {
+		if (window.pageYOffset >= sticky) {
+			navbar.classList.add("sticky")
+		} else {
+			navbar.classList.remove("sticky")
+		}
+	}
 }
+
+
+
 
 
 //==========================================================END OF CODE======================================================================

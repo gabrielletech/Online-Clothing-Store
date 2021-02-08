@@ -152,46 +152,6 @@ ion-icon {
 	height: 80vh;
 }
 
-.dresses {
-	width: auto;
-	height: 100vh;
-}
-
-.tops {
-	width: auto;
-	height: 100vh;
-}
-
-.bottoms {
-	width: auto;
-	height: 100vh;
-}
-
-.shoes {
-	width: auto;
-	height: 100vh;
-}
-
-.accessories {
-	width: auto;
-	height: 100vh;
-}
-
-.loungewear {
-	width: auto;
-	height: 100vh;
-}
-
-.swimwear {
-	width: auto;
-	height: 100vh;
-}
-
-.activewear {
-	width: auto;
-	height: 100vh;
-}
-
 .who {
 	width: 100%;
 	height: 100vh;
@@ -609,9 +569,7 @@ hr.line {
 }
 
 div.content {
-	margin-left: 250px;
-	padding: 1px 16px;
-	height: 1000px;
+	height: 100vh;
 }
 
 .shop-title {
@@ -620,8 +578,9 @@ div.content {
 }
 
 /* PRODUCT CARD */
-.price {
+.price a {
 	color: #808080;
+	
 }
 
 .shop-gallery {
@@ -699,33 +658,70 @@ div.content {
 	font-style: italic;
 }
 
+.product {
+	flex-direction: column;
+	justify-content: space-between;
+}
 
-.box {
-	width: 300px;
-	box-shadow: 2px 2px 30px rgba(0,0,0,0.2);
+.product-items {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+.product-items li {
+	list-style-type: none;
+	padding: 0;
+	flex: 0 1 18rem;
+	margin: .5rem;
+	height: 35rem;
+}
+
+.product-image {
+	max-width: 34rem;
+	max-height: 25rem;
+}
+
+.product-name {
+	font-size: 1.5rem;
+}
+
+.in-stock {
+	color: #008000;
+}
+
+.out-stock {
+	color: #ff0000;
+}
+
+#navbar {
+	height: 35px;
+	background-color: #fff;
 	overflow: hidden;
-	position: absolute;
-	border-radius: 10px;
-	-webkit-border-radius: 10px;
-	-moz-border-radius: 10px;
-	-ms-border-radius: 10px;
-	-o-border-radius: 10px;
+	box-shadow: 2px 2px 12px rgba(0,0,0,0.2);
 }
 
-.slide-img {
-	height: 250px;
-	background-position: center;
-	background-size: cover;
+#navbar a {
+	display: inline-block;
+	text-align: center;
+	padding: 14px;
+	text-decoration: none;
 }
 
-.slide-img img {
+/* the sticky class is added to the navbar with Js when it reaches its scroll position */
+.sticky {
+	position: fixed;
+	top: 0;
 	width: 100%;
-	height: 100%;
-	object-fit: cover;
-	box-sizing: border-box;
 }
 
-.detail-box {
+/* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
+.sticky .page {
+	padding: 60px;
+}
+
+/*.detail-box {
 	width: 100%;
 	display: flex;
 	align-items: center;
@@ -749,16 +745,14 @@ div.content {
 	text-decoration: none;
 }
 
-.product-items {
-	display: flex;
-}
+
 
 .product-items li {
 	display: inline;
 	list-style-type: none;
 	margin-right: 12rem;
 	margin-left: 8rem;
-}
+} */
 
 /*********************************************************************************************************************/
 /* ABOUT US PAGE */
@@ -1302,10 +1296,6 @@ input[type=submit]:hover {
 	font-style: italic;
 }
 
-.price {
-	margin-left: 215px;
-	font-weight: bold;
-}
 
 .range {
 	font-family: Adobe FangSong Std R;
@@ -1321,23 +1311,6 @@ input[type=submit]:hover {
 	50% {box-shadow: 10px 20px 30px grey;}
 }
 
-.in-stock {
-	color: #008000;
-}
-
-.out-stock {
-	color: #ff0000;
-}
-
-.like {
-	font-size: 24px;
-	cursor: pointer;
-	margin-left: 140px;
-}
-
-.price {
-	font-style: bold;
-}
 
 .table {
 	border: solid, black;
