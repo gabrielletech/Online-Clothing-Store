@@ -1,5 +1,4 @@
 //========================================================= CODE ===========================================================================
-
 	let cartItems = [];// empty array to recieve and store items added to the array
 	let total = 0;
 
@@ -25,42 +24,77 @@
 			inCart: 0,
 		},
 
-		{
-			name: "One Arm LBD",
-			image: "/images/0022551_cotton-one-shoulder-bodycon-dress_400.jpeg",
-			price: 10.99,
-			inCart: 0,
-		},
+        {
+            name: "Draw String Frill Top",
+			image: "/images/69833692_937699106589965_1949832117781266432_n.jpg",
+			price: 7.99,
+			inCart: 0
+        },
 
-		{
-			name: "One Arm LBD",
-			image: "/images/0022551_cotton-one-shoulder-bodycon-dress_400.jpeg",
-			price: 10.99,
-			inCart: 0,
-		},
+        {
+            name: "Seamless Bandeux",
+			image: "/images/259x259.jpg",
+			price: 5.99,
+			inCart: 0
+        },
 
-		{
-			name: "One Arm LBD",
-			image: "/images/0022551_cotton-one-shoulder-bodycon-dress_400.jpeg",
-			price: 10.99,
-			inCart: 0,
-		},
+        {
+            name: "Mom Jeans",
+			image: "/images/jeans.jpeg",
+			price: 20.99,
+			inCart: 0
+        },
 
-		{
-			name: "One Arm LBD",
-			image: "/images/0022551_cotton-one-shoulder-bodycon-dress_400.jpeg",
-			price: 10.99,
-			inCart: 0,
-		},
+        {
+            "name": "Cargo Pants",
+			"image": "/images/ladies-cargo-pants-walmart-womens-trousers-black-military-work-skinny-australia-with-pockets-nz.jpg",
+			"price": 18.99,
+			"inCart": 0
+        },
 
-		{
-			name: "One Arm LBD",
-			image: "/images/0022551_cotton-one-shoulder-bodycon-dress_400.jpeg",
-			price: 10.99,
-			inCart: 0,
-		},
+        {
+            "name": "Denim Shorts",
+			"image": "/images/6ad17696-bfac-4afd-b8b8-b24c446732e1_1.d09f7143afddfa44e69b3129df0d5f5c.jpeg",
+			"price": 12.99,
+			"inCart": 0
+        },
+
+        {
+            "name": "Sky Blue Bikini Set",
+			"image": "/images/69592641_937590923267450_1200335899150254080_o.jpg",
+			"price": 15.99,
+			"inCart": 0
+        },
+
+        {
+            "name": "Miss Pretty Sunglasses",
+			"image": "/images/119582769_1257141591312380_2838110834343700261_n.jpg",
+			"price": 5.99,
+			"inCart": 0
+        },
+
+        {
+            "name": "Flat Hat",
+			"image": "/images/131752739_1335133673513171_1379380516579143644_o.jpg",
+			"price": 7.99,
+			"inCart": 0
+        },
+
+        {
+            "name": "Summer Sandals",
+			"image": "/images/78498933_1016351058724769_390191615563530240_n.jpg",
+			"price": 10.99,
+			"inCart": 0
+        },
+
+        {
+            "name": "Soosie Block Heels",
+			"image": "/images/72565817_965010850525457_8663587946777018368_n.jpg",
+			"price": 15.99,
+			"inCart": 0
+        }
 		
-	];
+	]; 
 
 	// function for dropdown menu 
 	function homeDropdown() {
@@ -114,7 +148,7 @@ $(document).ready(function() {
             </li>`)
 	}
 
-	cartItems = JSON.parse(localStorage.getItem("cartItems"));
+	cartItems = JSON.parse(localStorage.getItem("Item"));
 	totalCartCost = JSON.parse(localStorage.getItem("totalCost"));
 	for (i in cartItems) {//for in loop that displays items added to cart on the cart page including the remove button
 		$(".table").append(
@@ -133,7 +167,7 @@ $(document).ready(function() {
 		<tr><td id="removePrice">Total Cost: $ ${totalCartCost}</td></tr>`
 	);
 
-});
+})
 	
 	if(JSON.parse(localStorage.getItem("cartItems")) == null || JSON.parse(localStorage.getItem("cartItems")) == undefined) {
 		localStorage.setItem("cartItems", JSON.stringify(cartItems));
@@ -205,6 +239,7 @@ $(document).ready(function() {
 		localStorage.setItem("totalCost", cost);
 		$("#removePrice").html(`Total Cost: $ ${cost}`);//updates total cost when delivery is selected
 	}
+
 
 	// blog page filter selection
 	filterSelection("all") //execute the function and show all columns 
@@ -297,26 +332,6 @@ $(document).ready(function() {
 	document.getElementById(option).style.display = "block";
 	evt.currentTarget.className += " active";
 
-
-	// SHOP PAGE NAVBAR
-
-	// When the user scrolls the page, execute navScroll
-	window.onscroll = function() {navScroll()};
-
-	// get the navbar 
-	let navbar = document.getElementById("navbar");
-
-	// get offset position of the navbar
-	let sticky = navbar.offsetTop;
-
-	// add the sticky class to the navbar whe  you reach its scroll position. Remove "sticky" when you leave the scroll position
-	function navScroll() {
-		if (window.pageYOffset >= sticky) {
-			navbar.classList.add("sticky")
-		} else {
-			navbar.classList.remove("sticky")
-		}
-	}
 }
 
 

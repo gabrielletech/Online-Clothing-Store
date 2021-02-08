@@ -1,6 +1,94 @@
 {
-    "name":"Polka Dot Mini",
-    "image": "/images/119469273_1257141594645713_3489490998363617874_n.jpg",
-    "price": 8.99,
-    "inCart": 0
+    "Item": [
+        {
+            "name":"Polka Dot Mini",
+            "image": "/images/119469273_1257141594645713_3489490998363617874_n.jpg",
+            "price": 8.99,
+            "inCart": 0
+        },
+
+        {
+            "name": "Exotic Maxi Dress",
+			"image": "/images/115889193_1215859095440630_3124536734724679976_n.jpg",
+			"price": 11.99,
+			"inCart": 0
+        },
+
+        {
+            "name": "Astrid Cami",
+			"image": "/images/247344-386-2",
+			"price": 11.99,
+			"inCart": 0
+        },
+
+        {
+            "name": "Boxy Shirt",
+			"image": "/images/2050495-23-2",
+			"price": 11.99,
+			"inCart": 0
+        },
+
+        {
+            "name": "Seamless Bandeux",
+			"image": "/images/259x259",
+			"price": 11.99,
+			"inCart": 0
+        },
+
+        {
+            "name": "Mom Jeans",
+			"image": "/images/jeans",
+			"price": 11.99,
+			"inCart": 0
+        },
+
+        {
+            "name": "Cargo Pants",
+			"image": "/images/ladies-cargo-pants-walmart-womens-trousers-black-military-work-skinny-australia-with-pockets-nz",
+			"price": 11.99,
+			"inCart": 0
+        },
+
+        {
+            "name": "Denim Shorts",
+			"image": "/images/6ad17696-bfac-4afd-b8b8-b24c446732e1_1.d09f7143afddfa44e69b3129df0d5f5c",
+			"price": 11.99,
+			"inCart": 0
+        },
+
+        {
+            "name": "Sky Blue Bikini Set",
+			"image": "/images/69592641_937590923267450_1200335899150254080_o",
+			"price": 11.99,
+			"inCart": 0
+        },
+
+        {
+            "name": "Miss Pretty Sunglasses",
+			"image": "/images/119582769_1257141591312380_2838110834343700261_n",
+			"price": 11.99,
+			"inCart": 0
+        },
+
+        {
+            "name": "Flat Hat",
+			"image": "/images/131752739_1335133673513171_1379380516579143644_o",
+			"price": 11.99,
+			"inCart": 0
+        },
+
+        {
+            "name": "Summer Sandals",
+			"image": "/images/78498933_1016351058724769_390191615563530240_n",
+			"price": 11.99,
+			"inCart": 0
+        },
+
+        {
+            "name": "Soosie Block Heels",
+			"image": "/images/72565817_965010850525457_8663587946777018368_n",
+			"price": 11.99,
+			"inCart": 0
+        }
+    ]
 }

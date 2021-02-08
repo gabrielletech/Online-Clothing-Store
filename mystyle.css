@@ -679,8 +679,8 @@ div.content {
 }
 
 .product-image {
-	max-width: 34rem;
-	max-height: 25rem;
+	width: 15rem;
+	height: 15rem;
 }
 
 .product-name {
@@ -693,32 +693,6 @@ div.content {
 
 .out-stock {
 	color: #ff0000;
-}
-
-#navbar {
-	height: 35px;
-	background-color: #fff;
-	overflow: hidden;
-	box-shadow: 2px 2px 12px rgba(0,0,0,0.2);
-}
-
-#navbar a {
-	display: inline-block;
-	text-align: center;
-	padding: 14px;
-	text-decoration: none;
-}
-
-/* the sticky class is added to the navbar with Js when it reaches its scroll position */
-.sticky {
-	position: fixed;
-	top: 0;
-	width: 100%;
-}
-
-/* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
-.sticky .page {
-	padding: 60px;
 }
 
 /*.detail-box {
