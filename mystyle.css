@@ -338,6 +338,11 @@ hr.line {
 	color: #ffeded;
 }
 
+.na-links a:hover {
+	text-decoration: none;
+	color: #000000;
+}
+
 .shop-now {
 	display: block;
 	margin: auto;
@@ -357,6 +362,11 @@ hr.line {
 .shop-now:hover {
 	background-color: #ffeded;
 	border: none;
+}
+
+.shop-now a:hover {
+	text-decoration: none;
+	color: #000000;
 }
 
 /* WHATS NEW SECTION  */
@@ -426,12 +436,12 @@ hr.line {
 
 /* FOOTER SECTION */
 .footer-section{
-	height: 40vh;
+	height: 50vh;
 	width: 100%;
 	margin-top: 40px;
 	margin-bottom: 5px;
 	padding: 20px;
-	
+	background-color: #000000;
 }
 
 .footer-items li {
@@ -449,15 +459,22 @@ hr.line {
 .footer-logo {
 	height: 120px;
 	width: 120px;
+	margin-bottom: 10px;
+	border-radius: 50%;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	-ms-border-radius: 50%;
+	-o-border-radius: 50%;
 }
 
 .footer-header {
 	font-weight: bold;
-	color: #000000;
+	color: #fff;
 }
 
 .social-icons {
 	font-size: 24px;
+	color: #fff;
 }
 
 .bottom-text {

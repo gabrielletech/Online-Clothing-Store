@@ -1,7 +1,5 @@
 //========================================================= CODE ===========================================================================
-	let cartItems = [];// empty array to recieve and store items added to the array
-	let total = 0;
-
+	
 	let Item = [//array of item objects
 		{
 			name:"Polka Dot Mini",
@@ -46,88 +44,62 @@
         },
 
         {
-            "name": "Cargo Pants",
-			"image": "/images/ladies-cargo-pants-walmart-womens-trousers-black-military-work-skinny-australia-with-pockets-nz.jpg",
-			"price": 18.99,
-			"inCart": 0
+            name: "Cargo Pants",
+			image: "/images/ladies-cargo-pants-walmart-womens-trousers-black-military-work-skinny-australia-with-pockets-nz.jpg",
+			price: 18.99,
+			inCart: 0
         },
 
         {
-            "name": "Denim Shorts",
-			"image": "/images/6ad17696-bfac-4afd-b8b8-b24c446732e1_1.d09f7143afddfa44e69b3129df0d5f5c.jpeg",
-			"price": 12.99,
-			"inCart": 0
+            name: "Denim Shorts",
+			image: "/images/6ad17696-bfac-4afd-b8b8-b24c446732e1_1.d09f7143afddfa44e69b3129df0d5f5c.jpeg",
+			price: 12.99,
+			inCart: 0
         },
 
         {
-            "name": "Sky Blue Bikini Set",
-			"image": "/images/69592641_937590923267450_1200335899150254080_o.jpg",
-			"price": 15.99,
-			"inCart": 0
+            name: "Sky Blue Bikini Set",
+			image: "/images/69592641_937590923267450_1200335899150254080_o.jpg",
+			price: 15.99,
+			inCart: 0
         },
 
         {
-            "name": "Miss Pretty Sunglasses",
-			"image": "/images/119582769_1257141591312380_2838110834343700261_n.jpg",
-			"price": 5.99,
-			"inCart": 0
+            name: "Miss Pretty Sunglasses",
+			image: "/images/119582769_1257141591312380_2838110834343700261_n.jpg",
+			price: 5.99,
+			inCart: 0
         },
 
         {
-            "name": "Flat Hat",
-			"image": "/images/131752739_1335133673513171_1379380516579143644_o.jpg",
-			"price": 7.99,
-			"inCart": 0
+            name: "Flat Hat",
+			image: "/images/131752739_1335133673513171_1379380516579143644_o.jpg",
+			price: 7.99,
+			inCart: 0
         },
 
         {
-            "name": "Summer Sandals",
-			"image": "/images/78498933_1016351058724769_390191615563530240_n.jpg",
-			"price": 10.99,
-			"inCart": 0
+            name: "Summer Sandals",
+			image: "/images/78498933_1016351058724769_390191615563530240_n.jpg",
+			price: 10.99,
+			inCart: 0
         },
 
         {
-            "name": "Soosie Block Heels",
-			"image": "/images/72565817_965010850525457_8663587946777018368_n.jpg",
-			"price": 15.99,
-			"inCart": 0
+            name: "Soosie Block Heels",
+			image: "/images/72565817_965010850525457_8663587946777018368_n.jpg",
+			price: 15.99,
+			inCart: 0
         }
 		
 	]; 
 
-	// function for dropdown menu 
-	function homeDropdown() {
-		document.getElementById("myDropdown").classList.toggle("show");
-	}
-
-	function shopDropdown() {
-		document.getElementById("myDropdown2").classList.toggle("show");
-	}
-
-	function aboutDropdown() {
-		document.getElementById("myDropdown3").classList.toggle("show");
-	}
-
-	// close the dropdown when a user clicks outside of it 
-	window.onclick = function(e) {
-		if (!e.target.matches('.dropbtn')) {
-			let dropdowns = document.getElementsByClassName("dropdown-content");
-
-			let i;
-
-			for (i = 0; i < dropdowns.length; i++) {
-				let openDropdown = dropdowns[i];
-				if (openDropdown.classList.contains('show')) {
-					openDropdown.classList.remove('show');
-				}
-			}
-		}
-	}
+	let cartItems = [];// empty array to recieve and store items added to the array
+	let total = 0;
 
 $(document).ready(function() {
-
-	for (i in Item) {//for in loop to display catalogue items on the catalogue page
+	//for in loop to display catalogue items on the catalogue page
+	for (i in Item) {
 		$(".product-items").append(
 			`<li>
 				<div class="product">
@@ -148,7 +120,9 @@ $(document).ready(function() {
             </li>`)
 	}
 
-	cartItems = JSON.parse(localStorage.getItem("Item"));
+	localStorage.setItem("items", JSON.stringify(Item));
+	let cartItems = JSON.parse(localStorage.getItem("Item"));
+	console.log(cartItems);
 	totalCartCost = JSON.parse(localStorage.getItem("totalCost"));
 	for (i in cartItems) {//for in loop that displays items added to cart on the cart page including the remove button
 		$(".table").append(
@@ -174,6 +148,7 @@ $(document).ready(function() {
 	}
 
 	function add(i) {//function to add items to the cart and a popup alert displays alerting the user of an item added to card
+		cartItems = JSON.parse(localStorage.getItem("Item[i]"));
 		cartItems.push(Item[i]);
 		localStorage.setItem("cartItems", JSON.stringify(cartItems));
 		alert("Item added to cart!")
@@ -238,6 +213,35 @@ $(document).ready(function() {
 	
 		localStorage.setItem("totalCost", cost);
 		$("#removePrice").html(`Total Cost: $ ${cost}`);//updates total cost when delivery is selected
+	}
+
+	// function for dropdown menu 
+	function homeDropdown() {
+		document.getElementById("myDropdown").classList.toggle("show");
+	}
+
+	function shopDropdown() {
+		document.getElementById("myDropdown2").classList.toggle("show");
+	}
+
+	function aboutDropdown() {
+		document.getElementById("myDropdown3").classList.toggle("show");
+	}
+
+	// close the dropdown when a user clicks outside of it 
+	window.onclick = function(e) {
+		if (!e.target.matches('.dropbtn')) {
+			let dropdowns = document.getElementsByClassName("dropdown-content");
+
+			let i;
+
+			for (i = 0; i < dropdowns.length; i++) {
+				let openDropdown = dropdowns[i];
+				if (openDropdown.classList.contains('show')) {
+					openDropdown.classList.remove('show');
+				}
+			}
+		}
 	}
 
 
