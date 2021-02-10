@@ -820,10 +820,6 @@ div.content {
 	text-align: center;
 }
 
-.team-row {
-
-}
-
 .team-col {
 	float: left;
 	width: 33.3%;
@@ -1062,6 +1058,10 @@ input[type=submit]:hover {
 
 /*********************************************************************************************************************/
 /* CART PAGE */
+.item-image img {
+	height: 100px;
+	width: 100px;
+}
 .cart-logo {
 	display: block;
 	margin: auto;

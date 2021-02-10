@@ -120,14 +120,15 @@ $(document).ready(function() {
             </li>`)
 	}
 
-	localStorage.setItem("items", JSON.stringify(Item));
-	let cartItems = JSON.parse(localStorage.getItem("Item"));
-	console.log(cartItems);
+	//localStorage.setItem("Item", JSON.stringify(Item));
+	//let cartItems = JSON.parse(localStorage.getItem("Item"));
+	//console.log(cartItems);
 	totalCartCost = JSON.parse(localStorage.getItem("totalCost"));
 	for (i in cartItems) {//for in loop that displays items added to cart on the cart page including the remove button
 		$(".table").append(
 			`
 			<tr>
+			<td class="item-image"><img src="${cartItems[i].image}"></td>
 			<td>${cartItems[i].name}</td>
 			<td>$ ${cartItems[i].price}</td>
 			<td><button onclick="removeItem(${i})" type="button" class="btn btn-secondary btn-sm">Remove Item</button></td>
@@ -144,13 +145,16 @@ $(document).ready(function() {
 })
 	
 	if(JSON.parse(localStorage.getItem("cartItems")) == null || JSON.parse(localStorage.getItem("cartItems")) == undefined) {
+		console.log("Empty cart")
+		localStorage.setItem("cartItems", JSON.stringify(cartItems));
+	} else {
 		localStorage.setItem("cartItems", JSON.stringify(cartItems));
 	}
 
 	function add(i) {//function to add items to the cart and a popup alert displays alerting the user of an item added to card
-		cartItems = JSON.parse(localStorage.getItem("Item[i]"));
+		//cartItems = JSON.parse(localStorage.getItem("Item[i]"));
 		cartItems.push(Item[i]);
-		localStorage.setItem("cartItems", JSON.stringify(cartItems));
+		localStorage.getItem("cartItems", JSON.stringify(cartItems));
 		alert("Item added to cart!")
 		cartNumbers();
 		totalCost();
