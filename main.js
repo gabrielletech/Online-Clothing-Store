@@ -3,6 +3,7 @@
 	let Item = [//array of item objects
 		{
 			name:"Polka Dot Mini",
+			tag: "mini",
 			image: "/images/119469273_1257141594645713_3489490998363617874_n.jpg",
 			price: 8.99,
 			inCart: 0,
@@ -10,6 +11,7 @@
 
 		{
 			name: "Exotic Maxi Dress",
+			tag: "Maxi Dress",
 			image: "/images/115889193_1215859095440630_3124536734724679976_n.jpg",
 			price: 11.99,
 			inCart: 0,
@@ -17,6 +19,7 @@
 
 		{
 			name: "One Arm LBD",
+			tag: "LBD",
 			image: "/images/0022551_cotton-one-shoulder-bodycon-dress_400.jpeg",
 			price: 10.99,
 			inCart: 0,
@@ -24,6 +27,7 @@
 
         {
             name: "Draw String Frill Top",
+			tag: "Frills",
 			image: "/images/69833692_937699106589965_1949832117781266432_n.jpg",
 			price: 7.99,
 			inCart: 0
@@ -31,6 +35,7 @@
 
         {
             name: "Seamless Bandeux",
+			tag: "Bandeux",
 			image: "/images/259x259.jpg",
 			price: 5.99,
 			inCart: 0
@@ -38,6 +43,7 @@
 
         {
             name: "Mom Jeans",
+			tag: "momJeans",
 			image: "/images/jeans.jpeg",
 			price: 20.99,
 			inCart: 0
@@ -45,6 +51,7 @@
 
         {
             name: "Cargo Pants",
+			tag: "CargoPants",
 			image: "/images/ladies-cargo-pants-walmart-womens-trousers-black-military-work-skinny-australia-with-pockets-nz.jpg",
 			price: 18.99,
 			inCart: 0
@@ -52,6 +59,7 @@
 
         {
             name: "Denim Shorts",
+			tag: "DenimShorts",
 			image: "/images/6ad17696-bfac-4afd-b8b8-b24c446732e1_1.d09f7143afddfa44e69b3129df0d5f5c.jpeg",
 			price: 12.99,
 			inCart: 0
@@ -59,6 +67,7 @@
 
         {
             name: "Sky Blue Bikini Set",
+			tag: "SkyBlue",
 			image: "/images/69592641_937590923267450_1200335899150254080_o.jpg",
 			price: 15.99,
 			inCart: 0
@@ -66,6 +75,7 @@
 
         {
             name: "Miss Pretty Sunglasses",
+			tag: "Sunnies",
 			image: "/images/119582769_1257141591312380_2838110834343700261_n.jpg",
 			price: 5.99,
 			inCart: 0
@@ -73,6 +83,7 @@
 
         {
             name: "Flat Hat",
+			tag: "FlatHat",
 			image: "/images/131752739_1335133673513171_1379380516579143644_o.jpg",
 			price: 7.99,
 			inCart: 0
@@ -80,6 +91,7 @@
 
         {
             name: "Summer Sandals",
+			tag: "SummerSandals",
 			image: "/images/78498933_1016351058724769_390191615563530240_n.jpg",
 			price: 10.99,
 			inCart: 0
@@ -87,6 +99,7 @@
 
         {
             name: "Soosie Block Heels",
+			tag: "SoosieBlock",
 			image: "/images/72565817_965010850525457_8663587946777018368_n.jpg",
 			price: 15.99,
 			inCart: 0
@@ -112,15 +125,63 @@ $(document).ready(function() {
 							<a href="#">$ ${Item[i].price}</a>
 						</div>
 						<div class="action-btn">
-							<button onclick="add(${i})" class="add-cart">Add to Cart</button>
+							<button class="add-cart">Add to Cart</button>
 							<ion-icon class="wishlist" name="heart"></ion-icon>
 						</div>	 
 					</div>
 				</div>
             </li>`)
 	}
+	
+	let carts = document.querySelectorAll('.add-cart');
 
-	localStorage.setItem("Item", JSON.stringify(Item));
+	for (let i = 0; i < carts.length; i++) {
+		carts[i].addEventListener('click', () => {
+			cartNumbers(Item[i]);
+		})
+	}
+
+	function cartNumbers(Item) {
+		let itemNumbers = localStorage.getItem('cartNumbers');
+		itemNumbers = parseInt(itemNumbers);
+
+		if (itemNumbers) {
+			localStorage.setItem('cartNumbers', itemNumbers + 1);
+			document.querySelector('.shop-cart span').textContent = itemNumbers + 1;
+		} else {
+			localStorage.setItem('cartNumbers', 1);
+			document.querySelector('.shop-cart span').textContent = 1;
+		}
+
+		setItems(Item);
+	}
+
+	function onLoadCartNumbers() {
+		let itemNumbers = localStorage.getItem('cartNumbers');
+
+		if (itemNumbers) {
+			document.querySelector('.shop-cart span').textContent = itemNumbers;
+		}
+	}
+	onLoadCartNumbers();
+
+	function setItems(Item) {
+		let cartItems = localStorage.getItem('itemsInCart');
+		cartItems = JSON.parse(cartItems);
+
+		if (cartItems != null ) {
+			cartItems[Item.tag].inCart += 1;
+		}
+
+		if(cartItems[Item.tag] == undefined) {
+			cartItems = {
+				...cartItems,
+				[Item.tag]:Item
+			}
+		}
+	}
+
+	//localStorage.setItem("Item", JSON.stringify(Item));
 	//let cartItems = JSON.parse(localStorage.getItem("Item"));
 	//console.log(cartItems);
 	totalCartCost = JSON.parse(localStorage.getItem("totalCost"));
@@ -143,25 +204,6 @@ $(document).ready(function() {
 	);
 
 })
-	
-	/*if(JSON.parse(localStorage.getItem("cartItems")) == null || JSON.parse(localStorage.getItem("cartItems")) == undefined) {
-		console.log("Empty cart");
-		$(".message").append(
-			`<h1 class="empty-title>Your Cart is Empty</h1>"`
-		)
-	} else {
-		//localStorage.setItem("cartItems", JSON.stringify(cartItems));
-	}*/
-
-	function add(i) {//function to add items to the cart and a popup alert displays alerting the user of an item added to card
-		//cartItems = JSON.parse(localStorage.getItem("Item[i]"));
-		cartItems.push(Item[i]);
-		localStorage.setItem("cartItems", JSON.stringify(cartItems[i]));
-		alert("Item added to cart!")
-		cartNumbers();
-		totalCost();
-		
-	}
 
 	function removeItem(i) {// remove items from cart onclick
 		cartItems.splice(Item[i], 1);
@@ -173,9 +215,9 @@ $(document).ready(function() {
 	}
 
 
-	function cartNumbers() {// adds cart numbers to the cart icon span
+	/*	function cartNumbers() {// adds cart numbers to the cart icon span
 		document.querySelector(".shop-cart span").textContent = cartItems.length;
-	}
+	}*/
 
 
 	function totalCost() {//function that calculates total cost of items in cart and updates cart cost when an item is removed
@@ -344,6 +386,24 @@ $(document).ready(function() {
 
 }
 
+/*if(JSON.parse(localStorage.getItem("cartItems")) == null || JSON.parse(localStorage.getItem("cartItems")) == undefined) {
+	console.log("Empty cart");
+	$(".message").append(
+		`<h1 class="empty-title>Your Cart is Empty</h1>"`
+	)
+} else {
+	//localStorage.setItem("cartItems", JSON.stringify(cartItems));
+}*/
+
+/*function add(i) {//function to add items to the cart and a popup alert displays alerting the user of an item added to card
+	//cartItems = JSON.parse(localStorage.getItem("Item[i]"));
+	cartItems.push(Item[i]);
+	localStorage.setItem("cartItems", JSON.stringify(cartItems[i]));
+	alert("Item added to cart!")
+	cartNumbers();
+	totalCost();
+	
+}*/
 
 
 
